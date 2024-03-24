@@ -1,19 +1,19 @@
 ---
 type: lecture
-date: 2023-05-15T8:00:00+8:00
+date: 2024-05-13T12:00:00+8:00
 title: "Week 8: Metadata Application Profiles"
 tldr: "Introduction to tidy metadata."
 thumbnail: /static_files/presentations/metadata.png
 links:
-    - url: https://screencast-o-matic.com/embed?sc=cYhi29gDkq&v=6&ff=1&title=0&controls=1
+    - url: # https://screencast-o-matic.com/embed?sc=cYhi29gDkq&v=6&ff=1&title=0&controls=1
       name: video
-    - url: /content/metadata-application-profiles.html
+    - url: # /content/metadata-application-profiles.html
       name: content
-    - url: /content/metadata-application-profiles.html#Exercise
+    - url: # /content/metadata-application-profiles.html#Exercise
       name: exercise
 ---
 **Required Readings:**
-- [Course Content]({{ site.baseurl }}/content/metadata-application-profiles.html)
+- Course Content
 - Application profiles:
     - [Heery, R., & Patel, M. (2000). Application profiles: mixing and matching metadata schemas. Ariadne, (25)](http://www.ariadne.ac.uk/issue/25/app-profiles/)
     - [The Singapore Framework for Application Profiles](https://www.dublincore.org/specifications/dublin-core/singapore-framework/) Note this is currently under revision by DCMI. [You can catch up on their work here](https://github.com/dcmi/dcap) (and also see an example of use cases in the wild)

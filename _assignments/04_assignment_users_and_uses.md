@@ -2,12 +2,12 @@
 type: assignment
 title: 'Users and Uses Assignment'
 pdf:
-date: 2023-03-27T23:59:00Z
+date: 2024-03-25T23:59:00Z
 attachment:
 solutions:
 due_event:
     type: due
-    date: 2023-04-22T23:59:00Z
+    date: 2024-04-19T23:59:00Z
     description: 'Submit Users and Use Cases'
     url: /assignments/04_assignment_users_and_uses
 ---
@@ -16,7 +16,8 @@ Throughout this class we will read examples of data curation work that is "user 
 
 User stories are a simple but powerful way to capture requirements when doing systems analysis and development. The level of detail, and the specific narrative style will vary greatly depending on the intended audience. For example, if we want to create a user story for accessing data stored in our repository we will need to think closely about different types of users, their skills, the ways they could access data, the different data they may want, etc. However, we don’t want this user story to turn into something so complicated that it is overwhelming to translate into actionable policy or features of our data repository. So we we can try to atomize a user experience and come up with a simple story that tells us the “who what and why” - so that we can figure out “how.”
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/UserStoriesTable.png" alt="Table with Who What Why How" width="400"/>
+
+<img src="{{site.baseurl}}/_images/UserStoriesTable.png" alt="Table with Who What Why How" width="400"/>
 
 There is also a template example below to help you think through creating a user story.  Another way to begin gathering information about users and their expectations for data are through use cases. In week 2, one of the required readings was an example use case that W3C developed. Use their template to investigate best practices for data and repositories that are relevant to your protocol project.
 

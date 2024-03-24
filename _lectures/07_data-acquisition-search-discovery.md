@@ -1,19 +1,19 @@
 ---
 type: lecture
-date: 2023-05-08T8:00:00+8:00
+date: 2024-05-06T12:00:00+8:00
 title: "Week 7: Data Acquisition, Search, and Discovery"
 tldr: "A review of the fundamental challenges that data curators face in making data discoverable."
 thumbnail: /static_files/presentations/acq.png
 links:
-    - url: https://screencast-o-matic.com/embed?sc=cYh2Dik1zz&v=5&controls=1&ff=1
+    - url: #https://screencast-o-matic.com/embed?sc=cYh2Dik1zz&v=5&controls=1&ff=1
       name: video
-    - url: /content/data-acquisition-search-discovery.html
+    - url: #/content/data-acquisition-search-discovery.html
       name: content
-    - url: /content/data-acquisition-search-discovery.html#Exercise
+    - url: # /content/data-acquisition-search-discovery.html#Exercise
       name: exercise
 ---
 **Required Readings:**
-- [Course Content]({{ site.baseurl }}/content/data-acquisition-search-discovery.html)
+- Course Content  [Course Content]({{ site.baseurl }}/content/data-acquisition-search-discovery.html)
 - [Google Dataset Search: Building a search engine for datasets in an open Web ecosystem.](https://canvas.uw.edu/files/76572318/)
 - [Facilitating the discovery of public datasets](https://ai.googleblog.com/2017/01/facilitating-discovery-of-public.html)
 - [Discovering millions of datasets on the web](https://www.blog.google/products/search/discovering-millions-datasets-web/)

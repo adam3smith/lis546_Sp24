@@ -2,12 +2,12 @@
 type: assignment
 title: 'Metadata Assignment'
 pdf:
-date: 2023-03-27T23:59:00Z
+date: 2024-03-25T23:59:00Z
 attachment:
 solutions:
 due_event:
     type: due    
-    date: 2023-05-12T23:59:00Z
+    date: 2024-05-09T23:59:00Z
     description: 'Submit Metadata Application Profile'
     url: /assignments/07_assignment_metadata
 ---
@@ -15,7 +15,7 @@ due_event:
 <!--
 [metadata folder](https://github.com/OpenDataLiteracy/LIS-598-DataCuration2-Sp2019/tree/master/Metadata-Examples)
 -->
-**Overall goal**: Make use of your [users and uses assignment](https://norlab.github.io/LIS-546-SPR2021/assignments/04_assignment_users_and_uses) and begin to develop an application profile for your project.
+**Overall goal**: Make use of your [users and uses assignment]({{site.baseurl}}/assignments/04_assignment_users_and_uses) and begin to develop an application profile for your project.
 
 To complete this exercise, you will need to answer the following questions:
 - What elements are necessary to meet your stakeholders' expectations?

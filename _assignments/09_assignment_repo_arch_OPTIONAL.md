@@ -2,12 +2,12 @@
 type: assignment
 title: 'Repository Architectures (OPTIONAL) Assignment'
 pdf:
-date: 2023-03-27T23:59:00Z
+date: 2024-03-25T23:59:00Z
 attachment:
 solutions:
 due_event:
     type: due
-    date: 2023-05-19T23:59:00Z
+    date: 2024-05-16T23:59:00Z
     description: 'Optional Repository Assignment'
     url: /assignments/09_assignment_repo_arch_OPTIONAL
 ---

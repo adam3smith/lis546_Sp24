@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2023-05-22T8:00:00+8:00
+date: 2024-05-20T12:00:00+8:00
 title: "Week 9: Linked Data"
 tldr: "Introducing some working definitions and providing an overview of concepts related to linked data and the promise, but ultimate failure of the semantic web."
 thumbnail: /static_files/presentations/linked.png

@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2023-04-24T8:00:00+8:00
+date: 2024-04-22T12:00:00+8:00
 title: "Week 5: Data Packaging"
 tldr: "How and why our work in developing metadata for data curation is paramount to sustainable access, and introduce a few broadly used standards for creating data packages."
 thumbnail: /static_files/presentations/data-pkg.png
@@ -15,7 +15,7 @@ links:
 **Required Readings:**
 - [Course Content]({{ site.baseurl }}/content/data-packaging.html)
 - [Bechhofer, S., De Roure, D., Gamble, M., Goble, C., & Buchan, I. (2010). Research objects: Towards exchange and reuse of digital knowledge](https://eprints.soton.ac.uk/268555/1/fwcs-ros-submitted-2010-02-15.pdf)
-- Skim this list of projects and tools for data packaging: [Google Sheet](https://docs.google.com/spreadsheets/d/1Tg-oYGPdBDs5LORt0olD5t4X1R_YliUrwr6bNmImjTk/edit) or [PDF](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/DataPackagingFormats.pdf)
+- Skim this list of projects and tools for data packaging: [Google Sheet](https://docs.google.com/spreadsheets/d/1Tg-oYGPdBDs5LORt0olD5t4X1R_YliUrwr6bNmImjTk/edit) or [PDF](https://github.com/adam3smith/lis546_Sp24/raw/master/content/readings/DataPackagingFormats.pdf)
 - [Neylon (2017) Packaging data](http://cameronneylon.net/blog/packaging-data-the-core-problem-in-general-data-sharing/)
 
 **Pick 1 of following to read or review in-depth:**

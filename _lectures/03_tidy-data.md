@@ -1,19 +1,19 @@
 ---
 type: lecture
-date: 2023-04-10T8:00:00+8:00
+date: 2024-04-08T12:00:00+8:00
 title: "Week 3: Tidy Data"
 tldr: "Overview of tidy data principles as they relate to data curation, plus extending tidy data to some of the underlying principles in organizing, managing, and preparing all kinds of structured data for meaningful use."
 thumbnail: /static_files/presentations/tidy.png
 links:
-    - url: https://screencast-o-matic.com/embed?sc=cYfo0QzbHl&v=6&ff=1&title=0&controls=1
+    - url: 
       name: video
-    - url: /content/tidy-data.html
+    - url: # /content/tidy-data.html
       name: content
-    - url: /content/tidy-data.html#Exercise
+    - url: # /content/tidy-data.html#Exercise
       name: exercise
 ---
 **Required Readings:**
-- [Course Content]({{ site.baseurl }}/LIS-546-SPR2021/content/tidy-data.html)
+- [Course Content]({{ site.baseurl }}/lis546_Sp24/content/tidy-data.html)
 - [Rowson and Munoz (2016) Against Cleaning](http://curatingmenus.org/articles/against-cleaning/)
 - [Wickham, H. (2014), “Tidy Data,” Journal of Statistical Software, 59, 1–23](https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf)
 

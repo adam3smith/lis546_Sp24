@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2023-03-27T8:00:00+8:00
+date: 2024-03-25T12:00:00+8:00
 title: "Week 1: Course Overview and Introduction"
 tldr: "Overview of and Introduction to Data Curation II."
 thumbnail: /static_files/presentations/overview.png

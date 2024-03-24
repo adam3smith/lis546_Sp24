@@ -2,12 +2,12 @@
 type: assignment
 title: 'Data Pitch Assignment'
 pdf:
-date: 2023-03-27T23:59:00Z
+date: 2024-03-25T23:59:00Z
 attachment:
 solutions:
 due_event:
     type: due    
-    date: 2023-04-07T23:59:00Z
+    date: 2024-04-05T23:59:00Z
     description: 'Post Data Pitch'
     url: /assignments/02_assignment_data_pitch
 ---

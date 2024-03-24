@@ -2,12 +2,12 @@
 type: assignment
 title: 'Collection Policies Assignment'
 pdf:
-date: 2023-03-27T23:59:00Z
+date: 2024-03-25T23:59:00Z
 attachment:
 solutions:
 due_event:
     type: due
-    date: 2023-04-29T23:59:00Z
+    date: 2024-04-26T23:59:00Z
     description: 'Submit Collection Policies'
     url: /assignments/05_assignment_collection_policies
 ---
@@ -27,7 +27,7 @@ Here are some valuable examples:
 - ICPSR: [What should my deposit include?](http://www.icpsr.umich.edu/icpsrweb/deposit/)
 - University of Minnesota: [Data Collection Policy](https://conservancy.umn.edu/pages/drum/policies/#data-collection-policy)
 - Cornell: [Content collection policy](http://guides.library.cornell.edu/ecommons/contentpolicy) and also see their valuable [Recommended file formats](http://guides.library.cornell.edu/ecommons/formats)
-- QDR: has a very structured submission process, including a set of helpful [data deposit forms](https://qdr.syr.edu/deposit/process)
+- QDR: has both a [collection development policy](https://qdr.syr.edu/policies/collectionsdevelopment) and instructions for users on [preparing a data deposit](https://qdr.syr.edu/guidance/managing/preparing-data).
 - IDEALS: a repository at the University of Illinois has an excellent policy on the preservation grantees they can make for [particular file formats](https://wiki.illinois.edu/wiki/display/IDEALS/Digital+Preservation+Support+Policy#DigitalPreservationSupportPolicy-Category1)
 - SF Open Data: [Submission Guidelines](https://datasf.org/publishing/submission-guidelines/)
 - A more general approach is to define the scope of an open data program, see the Seattle Open Data [description](http://www.seattle.gov/tech/initiatives/open-data/about-the-open-data-program) for a helpful example.
