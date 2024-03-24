@@ -29,7 +29,7 @@ I have two requests related to this policy:
 
 1. Please make an earnest effort to keep up with work. The course is designed to build upon previous week's content. Practice or exercise in one week often is the baseline for starting an assignment the next week.
 
-2. I have a no questions asked policy - but you must request an extension at least 48 hours before an assignment is due (my email is `nmweber@uw.edu`). If you are falling behind and I havent't had have any communication from you I may reach out with an email. Please don't interpret this as any form of pressure other than my expressing a concern.    
+2. I have a no questions asked policy - but you must request an extension at least 48 hours before an assignment is due (my email is `skarcher@uw.edu`). If you are falling behind and I havent't had have any communication from you I may reach out with an email. Please don't interpret this as any form of pressure other than my expressing a concern.    
 
 ## How this class is organized
 There are two aspect of this class that will require your time and attention.
@@ -74,56 +74,56 @@ There are two aspect of this class that will require your time and attention.
   <tr>
     <td class="tg-0lax">1</td>
     <td class="tg-0lax">Class Introduction</td>
-    <td class="tg-0lax"><a href="https://canvas.uw.edu/courses/1465297/discussion_topics/6135505" target="_blank">Introductions</a></td>
-    <td class="tg-0lax">None</td>
+    <td class="tg-0lax"><a href="https://canvas.uw.edu/courses/1641385/discussion_topics/8008430" target="_blank">Introductions</a></td>
+    <td class="tg-0lax"><a href="https://adam3smith.github.io/lis546_Sp24project/" target="_blank">Read the Protocol Project Overview</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">2</td>
     <td class="tg-0lax">Tables, Trees, and Triples</td>
-    <td class="tg-0lax">Cookie Recipes</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/02_assignment_data_pitch" target="_blank" rel="noopener noreferrer">Data Pitch</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/tables-trees-triples.html#Exercise" target="_blank">-->Cookie Recipe<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/02_assignment_data_pitch" target="_blank">-->Data Pitch<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">3</td>
     <td class="tg-0lax">Tidy Data</td>
-    <td class="tg-0lax">Messy Recipe Data</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/03_assignment_statement_of_work" target="_blank" rel="noopener noreferrer">Definition, Scope, Audience</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/tidy-data.html#Exercise" target="_blank">-->Messy Recipe Data<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/03_assignment_statement_of_work" target="_blank">-->Definition, Scope, Audience<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">4</td>
     <td class="tg-0lax">Data Integration</td>
-    <td class="tg-0lax">311 Data</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/04_assignment_users_and_uses" target="_blank" rel="noopener noreferrer">User Stories</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/data-integration.html#Exercise" target="_blank">-->311 Data<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/04_assignment_users_and_uses" target="_blank">-->User Stories<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">5</td>
     <td class="tg-0lax">Data Packaging</td>
-    <td class="tg-0lax">Data Curator Demo</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/05_assignment_collection_policies" target="_blank" rel="noopener noreferrer">Data Collection Policies</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/data-packaging.html#Exercise" target="_blank">-->Data Curator Demo<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/05_assignment_collection_policies" target="_blank">-->Data Collection Policies<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">6</td>
-    <td class="tg-0lax">Repository Architectures</td>
-    <td class="tg-0lax">None</td>
+    <td class="tg-0lax">Ethics and Politics of Data Curation</td>
+    <td class="tg-0lax">Data repository audit</td>
     <td class="tg-0lax">None</td>
   </tr>
   <tr>
     <td class="tg-0lax">7</td>
     <td class="tg-0lax">Data Acquisition, Search, and Discovery</td>
-    <td class="tg-0lax">APIs</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/06_assignment_transformations_and_quality" target="_blank" rel="noopener noreferrer">Data Transformations and Quality</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/data-acquisition-search-discovery.html#Exercise" target="_blank">-->APIs<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/06_assignment_transformations_and_quality" target="_blank">-->Data Transformations and Quality<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">8</td>
     <td class="tg-0lax">Metadata Application Profiles</td>
     <td class="tg-0lax">None</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/08_assignment_metadata" target="_blank" rel="noopener noreferrer">Metadata Application Profiles</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/07_assignment_metadata" target="_blank">-->Metadata Application Profiles<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">9</td>
     <td class="tg-0lax">Ontologies and Linked Data</td>
     <td class="tg-0lax">None</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/07_assignment_licensing" target="_blank" rel="noopener noreferrer">Data Licensing</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/08_assignment_licensing" target="_blank">-->Data Licensing<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">10</td>
@@ -132,8 +132,9 @@ There are two aspect of this class that will require your time and attention.
     <td class="tg-0lax">Presentations</td>
   </tr>
 </tbody>
-</table></div>
-<br>  
+</table>
+</div>
+<br>
 ## Grades  
 
 Your grade for this course is made up of four different components: Participation, Exercises, Protocol Assignments, and your final Protocol.
@@ -144,17 +145,17 @@ Your grade for this course is made up of four different components: Participatio
 
 - Protocol Assignments: Most weeks also have a protocol related assignment. If you complete these before our weekly meetings I can give you feedback and help you structure these so that they are useful to your final deliverable. You only need to complete these by including them in your final protocol deliverable. (20% of your final grade)
 
-- Protocol: The final assignment that is due on or before `Friday June 02, 2023` - The assignment is described in detail on this [page](https://nniiicc.github.io/lis546_Sp23/assignments/01_assignment_overview). In short, the assignment asks you to envision curating and archiving a set of open data that is focused on a particular topic of interest to a particular audience. This builds upon your experience in developing a protocol in DC I. The final protocol can be turned in a variety of formats, but must include all of the components to be given full credit. (60% of your final grade)
+- Protocol: The final assignment that is due on or before `May 31st, 2024` - The assignment is described in detail on this [page](https://nniiicc.github.io/lis546_Sp23/assignments/01_assignment_overview). In short, the assignment asks you to envision curating and archiving a set of open data that is focused on a particular topic of interest to a particular audience. This builds upon your experience in developing a protocol in DC I. The final protocol can be turned in a variety of formats, but must include all of the components to be given full credit. (60% of your final grade)
 
 ## What to do if you find a mistake in this text
 If you find a mistake, an issue, or want to make a recommendation for improvement please send me an email `nmweber@uw.edu`. I promise I want to hear about it.
 
 **Acknowledgements**
- I have had a lot of help putting together these materials. Where possible I have documented these individuals and resources throughout. Some explicit thanks is necessary - Eva Brown, Andrea Thomer, Peter Organisciak, Katrina Fenlon, and Alex Garnett have contributed ideas for exercises, readings, and reviewed portions of each chapter.
+ This course was originally designed by Nic Weber and updated by Bree Norlander and now, me. Nic writes: I have had a lot of help putting together these materials. Where possible I have documented these individuals and resources throughout. Some explicit thanks is necessary - Eva Brown, Andrea Thomer, Peter Organisciak, Katrina Fenlon, and Alex Garnett have contributed ideas for exercises, readings, and reviewed portions of each chapter.
 
  <h1><a id="Introduction">Introduction to Data Curation II</a></h1>    
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander**  
+**Editing & Updates: Bree Norlander, Sebastian Karcher**  
 This introduction provides an overview of the conceptual content that we will engage in for DC II. The goal is to refresh your memory about concepts that were covered in DC I and how we will use these ideas throughout DC II.  
 
 ## Types of Knowledge
@@ -185,7 +186,7 @@ Before we begin diving into the content of DC II, it will help to revisit some d
 
 **Data**: Data are various types of digital objects playing the role of evidence. Type and role distinctions have to do with the relational nature of data. A type is rigid (such as a file format) and a role is fluid (it can change given a context). A simple example will help make this clear: I am a person. This is a type. Regardless of any external circumstances I will remain a person. I am also a professor. This is a role that I play. I might, depending on the success of my tenure case, not be a professor in the future. This is simply a professional title that I have for a small amount of time. Data have similar rigid and fluid properties - A tabular dataset will have a type of structure (rows, columns, and values). Unless we take some purposeful action to transform this data it will remain tabular as a type. But, this tabular data might be evidence of some real world phenomena - it might be a set of species occurrence records, the precipitation and temperature of a particular place, etc. This evidential role can shift and change depending on who is using the data, and for what purpose.
 
-**FAIR Data**: An emerging shorthand description for open research data - that is applicable to any sector - is the concept of F.A.I.R. FAIR data should be Findable, Accessible, Interoperable, and Reusable. We will discuss this concept in a bit more depth throughout this quarter. But, having this shorthand definition of what we try to achieve in doing data curaiton is a helpful reminder for the steps needed to make data truly accessible over the long term.
+**FAIR Data**: An emerging shorthand description for open research data - that is applicable to any sector - is the concept of F.A.I.R. FAIR data should be Findable, Accessible, Interoperable, and Reusable. We will discuss this concept in a bit more depth throughout this quarter. But, having this shorthand definition of what we try to achieve in doing data curaion is a helpful reminder for the steps needed to make data truly accessible over the long term.
 
 **Data curation**: Data curation is the active and ongoing management of data throughout a lifecycle of use, including its reuse in unanticipated contexts. This definition emphasizes that curation is not one narrow set of activities, but is an ongoing *process* that takes into account both material aspects of data, as well as the surrounding community of users that employ different practices while interacting with data and informaiton infrastructures. In DC II there is a particular emphasis on understanding the minutiae of information infrastructures as they relate to curatorial interventions.  
 
@@ -197,11 +198,11 @@ Before we begin diving into the content of DC II, it will help to revisit some d
 - Attributes are defining features of a class or sub-class, and refer to instances. An instance is a member of a class if it has all of the attributes of that class. For example, a Mammal has certain features (reproductive organs, respiratory system, etc) that define its base or necessary attributes for class membership. Canines as a sub-class have a more specific set of attributes that define membership in that sub-class.
 - Relations are the ways that we relate different instances and classes to one another. An instance or a class can be related in one or many ways.
 
+**Metadata Schemas** define attributes (e.g. what do you mean by “creator” in ecology?); Suggest controls of values (e.g. dates = MM-DD-YYYY); Define requirements for being “well-formed” (e.g. what fields are required for an implementation of the standard); and, Provide example use cases that are satisfied by the standard.
+
 In DC I we also differentiated data and metadata based on its structure.
 
 **Structured Metadata** is quite literally a structure of attribute and value pairs that are defined by a scheme. Most often, structured metadata is encoded in a machine readable format like XML or JSON. Crucially, structured metadata is compliant with and adheres to a standard that has defined attributes - such as Dublin Core, EML, DDI.
-
-**Metadata Schemas** define attributes (e.g. what do you mean by “creator” in ecology?); Suggest controls of values (e.g. dates = MM-DD-YYYY); Define requirements for being “well-formed” (e.g. what fields are required for an implementation of the standard); and, Provide example use cases that are satisfied by the standard.
 
 Structured metadata is, typically, differentiated by its documentation role.
 
@@ -213,11 +214,11 @@ Structured metadata is, typically, differentiated by its documentation role.
 
 A further important distinction that we made about metadata is that it can be applied to both individual items, or collections or groups of related items. We referred to this as a distinction between **Item and Collection level metadata**.
 
-**Expressivity Vs Tractability.** One of the key concepts we discussed in DC I is the idea that all knowledge organization activities are a tradeoff between how expressive we make information, and how tractable it is to manage that information. The more expressive we make our metadata, the less tractable it is in terms of generating, managing, and computing for reuse. Inversely, if we optimize our documentation for tractability we sacrifice some of the power in expressing information about attributes that define class membership. The challenge of all knowledge representation and organization activities - including metadata and documentation for data curation - is balancing expressivity and tractability.
-
 **Normalization** literally means making data conform to a normal schema. Practically, normalization includes the activities needed for transforming data structures, organizing variables (columns) and observations (rows), and editing data values so that they are consistent, interpretable, and match best practices in a field. (Note from Bree: For those of you with statistics and data science experience, note how this differs from [statistical normalization](https://en.wikipedia.org/wiki/Normalization_(statistics)) techniques. I mention this because I've been in conversations where the use of this term has meant different things to different people causing confusion.)
 
 **Data Quality**: From the ISO 8000 definition we assume data quality are "...the degree to which a set of characteristics of data fulfills stated requirements.” In simpler terms data quality is the degree to which a set of data or metadata are fit for use. Examples of data quality characteristics include completeness, validity, accuracy, consistency, availability and timeliness.
+
+**Expressivity vss Tractability.** One of the key concepts we discussed in DC I is the idea that all knowledge organization activities are a tradeoff between how expressive we make information, and how tractable it is to manage that information. The more expressive we make our metadata, the less tractable it is in terms of generating, managing, and computing for reuse. Inversely, if we optimize our documentation for tractability we sacrifice some of the power in expressing information about attributes that define class membership. The challenge of all knowledge representation and organization activities - including metadata and documentation for data curation - is balancing expressivity and tractability.
 
 ## Summary
 These basic concepts give us some of the declarative knowledge we need to begin to do data curation work. Over the next ten weeks I will continue to offer working definitions about basic concepts related to DC II readings and topics. It's important to keep in mind these are 'working definitions' - they may have important qualifications or need refinement in any particular context. The point of this long review isn't to ask you to memorize these concepts, but instead provide something like a 'term of reference' or knowledge base that we can continue to refine and improve over the course.
@@ -227,4 +228,4 @@ In DC II we are going to tackle topics that help us significantly expand this de
 I will also introduce some more advanced topics that relate to processes of acquiring, packaging, linking, and representing data such that it can be published to the web.
 
 <h2><a id="Exercise">Exercise</a></h2>
-Introduce yourself on the [Canvas discussion board](https://canvas.uw.edu/courses/1641385/discussion_topics/8008430). This is not a graded exercise.
+Introduce yourself on the [Canvas discussion board](https://canvas.uw.edu/courses/1724350/discussion_topics/8829618). This is not a graded exercise.

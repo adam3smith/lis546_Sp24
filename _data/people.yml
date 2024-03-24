@@ -1,7 +1,7 @@
 instructors:
-  - name: Nic Weber
-    profile_pic: /_images/pp/nic.png
-    # webpage: https://en.wikipedia.org/wiki/Albus_Dumbledore
+  - name: Sebastian Karcher
+    profile_pic: /_images/pp/sebastian.png
+    webpage: https://sebastiankarcher.com
 
 # teaching_assistants:
   # - name: Harry Potter

@@ -1,6 +1,7 @@
 ---
 layout: home
 ---
+<br>
 ## Course Overview
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
@@ -11,6 +12,7 @@ layout: home
 .tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
 @media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
+
 <div class="tg-wrap"><table class="tg">
 <thead>
   <tr>
@@ -24,56 +26,56 @@ layout: home
   <tr>
     <td class="tg-0lax">1</td>
     <td class="tg-0lax">Class Introduction</td>
-    <td class="tg-0lax"><a href="https://canvas.uw.edu/courses/1641385/discussion_topics/8008430" target="_blank">Introductions</a>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/project/" target="_blank">Read the Protocol Project Overview</a></td>
+    <td class="tg-0lax"><a href="https://canvas.uw.edu/courses/1641385/discussion_topics/8008430" target="_blank">Introductions</a></td>
+    <td class="tg-0lax"><a href="https://adam3smith.github.io/lis546_Sp24project/" target="_blank">Read the Protocol Project Overview</a></td>
   </tr>
   <tr>
     <td class="tg-0lax">2</td>
     <td class="tg-0lax">Tables, Trees, and Triples</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/content/tables-trees-triples.html#Exercise" target="_blank">Cookie Recipe</a></td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/02_assignment_data_pitch" target="_blank">Data Pitch</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/tables-trees-triples.html#Exercise" target="_blank">-->Cookie Recipe<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/02_assignment_data_pitch" target="_blank">-->Data Pitch<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">3</td>
     <td class="tg-0lax">Tidy Data</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/content/tidy-data.html#Exercise" target="_blank">Messy Recipe Data</a></td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/03_assignment_statement_of_work" target="_blank">Definition, Scope, Audience</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/tidy-data.html#Exercise" target="_blank">-->Messy Recipe Data<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/03_assignment_statement_of_work" target="_blank">-->Definition, Scope, Audience<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">4</td>
     <td class="tg-0lax">Data Integration</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/content/data-integration.html#Exercise" target="_blank">311 Data</a></td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/04_assignment_users_and_uses" target="_blank">User Stories</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/data-integration.html#Exercise" target="_blank">-->311 Data<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/04_assignment_users_and_uses" target="_blank">-->User Stories<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">5</td>
     <td class="tg-0lax">Data Packaging</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/content/data-packaging.html#Exercise" target="_blank">Data Curator Demo</a></td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/05_assignment_collection_policies" target="_blank">Data Collection Policies</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/data-packaging.html#Exercise" target="_blank">-->Data Curator Demo<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/05_assignment_collection_policies" target="_blank">-->Data Collection Policies<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">6</td>
-    <td class="tg-0lax">Repository Architectures</td>
-    <td class="tg-0lax">None</td>
+    <td class="tg-0lax">Ethics and Politics of Data Curation</td>
+    <td class="tg-0lax">Data repository audit</td>
     <td class="tg-0lax">None</td>
   </tr>
   <tr>
     <td class="tg-0lax">7</td>
     <td class="tg-0lax">Data Acquisition, Search, and Discovery</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/content/data-acquisition-search-discovery.html#Exercise" target="_blank">APIs</a></td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/06_assignment_transformations_and_quality" target="_blank">Data Transformations and Quality</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24content/data-acquisition-search-discovery.html#Exercise" target="_blank">-->APIs<!--</a>--></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/06_assignment_transformations_and_quality" target="_blank">-->Data Transformations and Quality<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">8</td>
     <td class="tg-0lax">Metadata Application Profiles</td>
     <td class="tg-0lax">None</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/07_assignment_metadata" target="_blank">Metadata Application Profiles</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/07_assignment_metadata" target="_blank">-->Metadata Application Profiles<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">9</td>
     <td class="tg-0lax">Ontologies and Linked Data</td>
     <td class="tg-0lax">None</td>
-    <td class="tg-0lax"><a href="https://nniiicc.github.io/lis546_Sp23/assignments/08_assignment_licensing" target="_blank">Data Licensing</a></td>
+    <td class="tg-0lax"><!--<a href="https://adam3smith.github.io/lis546_Sp24assignments/08_assignment_licensing" target="_blank">-->Data Licensing<!--</a>--></td>
   </tr>
   <tr>
     <td class="tg-0lax">10</td>
@@ -86,5 +88,6 @@ layout: home
 </div>
 <br>
 
-## Quick Links
-- Canvas Page (for registered students only): [Data Curation II](https://canvas.uw.edu/courses/1641385).
+
+<h2>Quick Links</h2>
+<p>Canvas Page (for registered students only): <a href="https://canvas.uw.edu/courses/1724350/" target="_blank">Data Curation II</a>.</p>
