@@ -13,7 +13,7 @@ links:
       name: exercise
 ---
 **Required Readings:**
-- Course Content  [Course Content]({{ site.baseurl }}/content/data-acquisition-search-discovery.html)
+- <!--Course Content  [Course Content]({{ site.baseurl }}/content/data-acquisition-search-discovery.html)-->
 - [Google Dataset Search: Building a search engine for datasets in an open Web ecosystem.](https://canvas.uw.edu/files/76572318/)
 - [Facilitating the discovery of public datasets](https://ai.googleblog.com/2017/01/facilitating-discovery-of-public.html)
 - [Discovering millions of datasets on the web](https://www.blog.google/products/search/discovering-millions-datasets-web/)

@@ -12,7 +12,7 @@ links:
 
 ---
 **Required Readings:**
-- [Course Content]({{ site.baseurl }}/content/linked-data.html)
+- <!--[Course Content]({{ site.baseurl }}/content/linked-data.html)-->
 - [Allemang, D., & Hendler, J. (2011). Semantic web for the working ontologist: effective modeling in RDFS and OWL. Second Edition](https://canvas.uw.edu/files/65174738/download?download_frd=1)
     - Read Chapter 1 for an introduction to SW’s concepts. If you are interested Chapter 2 gives a bit more detail on how the SW works, and Chapter 3 introduces RDF and knowledge modeling.
 - [Ontology Development 101 (Noy and McGuiness)](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html)

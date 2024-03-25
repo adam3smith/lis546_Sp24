@@ -13,7 +13,7 @@ links:
       name: exercise
 ---
 **Required Readings:**
-- [Course Content]({{ site.baseurl }}/content/data-packaging.html)
+- <!--[Course Content]({{ site.baseurl }}/content/data-packaging.html)-->
 - [Bechhofer, S., De Roure, D., Gamble, M., Goble, C., & Buchan, I. (2010). Research objects: Towards exchange and reuse of digital knowledge](https://eprints.soton.ac.uk/268555/1/fwcs-ros-submitted-2010-02-15.pdf)
 - Skim this list of projects and tools for data packaging: [Google Sheet](https://docs.google.com/spreadsheets/d/1Tg-oYGPdBDs5LORt0olD5t4X1R_YliUrwr6bNmImjTk/edit) or [PDF](https://github.com/adam3smith/lis546_Sp24/raw/master/content/readings/DataPackagingFormats.pdf)
 - [Neylon (2017) Packaging data](http://cameronneylon.net/blog/packaging-data-the-core-problem-in-general-data-sharing/)

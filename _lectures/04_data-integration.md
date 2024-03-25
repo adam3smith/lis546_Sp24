@@ -10,7 +10,7 @@ links:
 
 ---
 **Required Readings:**  
-- [Course Content]({{ site.baseurl }}/content/data-integration.html)
+- <!--[Course Content]({{ site.baseurl }}/content/data-integration.html)-->
 
 **Highly Recommended Readings:**
 - [Whong, Chris (2020) “Taming the MTA’s Unruly Turnstile Data”](https://medium.com/qri-io/taming-the-mtas-unruly-turnstile-data-c945f5f96ba0)
