@@ -227,6 +227,9 @@ In DC II we are going to tackle topics that help us significantly expand this de
 
 I will also introduce some more advanced topics that relate to processes of acquiring, packaging, linking, and representing data such that it can be published to the web.
 
+## Lecture 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OkhD1npNp8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <h2><a id="Exercise">Exercise</a></h2>
 - Introduce yourself on the [Canvas discussion board](https://canvas.uw.edu/courses/1724350/discussion_topics/8829618). (not graded)
-- Please complete the [When2Meet](https://www.when2meet.com/?24283105-pxkNq) to indicate when during the week you'd generally be available for meetings such as office hours of group meetings (answers will be visible by everyone in class) (not graded)

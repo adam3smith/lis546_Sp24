@@ -5,7 +5,7 @@ title: "Week 1: Course Overview and Introduction"
 tldr: "Overview of and Introduction to Data Curation II."
 thumbnail: /static_files/presentations/overview.png
 links:
-    - url:
+    - url: https://www.youtube.com/watch?v=OkhD1npNp8A
       name: video
     - url: /content/overview_and_intro.html
       name: content
