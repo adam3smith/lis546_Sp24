@@ -5,16 +5,16 @@ title: "Week 2: Tables, Trees, & Triples"
 tldr: "Given the fundamental relational nature of data we should start the course off by thinking about how to make decisions about ways data should be represented and made accessible to users."
 thumbnail: /static_files/presentations/ttt.png
 links:
-    - url: 
+    - url: https://youtu.be/3bfdfY4cJak
       name: video
-    - url:  # /content/tables-trees-triples.html
+    - url:  /content/tables-trees-triples.html
       name: content
-    - url: # /content/tables-trees-triples.html#Exercise
+    - url:  /content/tables-trees-triples.html#Exercise
       name: exercise
 
 ---
 **Required Readings:**
-- <!--[Course Content]({{ site.baseurl }}/content/tables-trees-triples.html) -->
+- [Course Content]({{ site.baseurl }}/content/tables-trees-triples.html)
 - [Data's Shape](https://katiekodes.com/intro-xml-json-2/)
 - [Data on the Web - Best Practices](https://www.w3.org/TR/dwbp/)
 - [Read one additional Data on the Web - Use Case from this list](https://www.w3.org/TR/dwbp-ucr/)

@@ -14,8 +14,8 @@ links:
 ---
 **Required Readings:**
 - <!--Course Content  [Course Content]({{ site.baseurl }}/content/data-acquisition-search-discovery.html)-->
-- [Google Dataset Search: Building a search engine for datasets in an open Web ecosystem.](https://canvas.uw.edu/files/76572318/)
-- [Facilitating the discovery of public datasets](https://ai.googleblog.com/2017/01/facilitating-discovery-of-public.html)
+- [Google Dataset Search: Building a search engine for datasets in an open Web ecosystem.](https://research.google/pubs/google-dataset-search-building-a-search-engine-for-datasets-in-an-open-web-ecosystem/)
+- [DataCite Commons - Exploiting the Power of PIDs and the PID Graph](https://doi.org/10.53731/kx45q-14h82)
 - [Discovering millions of datasets on the web](https://www.blog.google/products/search/discovering-millions-datasets-web/)
 
 **Suggested Readings:**

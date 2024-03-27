@@ -3,10 +3,10 @@ layout: default
 ---
 # Tables, Trees, and Triples
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander**  
+**Editing & Updates: Bree Norlander, Sebastian Karcher**  
 
 ## Introduction
-Susan Leigh Star once famously wrote that "Information science is the study of boring things." (Star, 2002) [PDF](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7523&rep=rep1&type=pdf). She meant this in loving way. As a field of practitioners and researchers we're concerned with the organization and encoding of information, as well as the standards and practices that govern reliable knowledge production. This requires us to study and become versant in particular "boring" details of how information is represented within broader information systems and infrastructures. An information infrastructure is, by Starr's account, highly relational. Information and infrastructures mean different things to different people at different points in time. Data is no different. In fact, there is a soundbite that you may come across in the data curation community that goes like this:
+Susan Leigh Star once famously wrote that "Information science is the study of boring things." [(Star, 2002) [PDF]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7523&rep=rep1&type=pdf). She meant this in loving way. As a field of practitioners and researchers we're concerned with the organization and encoding of information, as well as the standards and practices that govern reliable knowledge production. This requires us to study and become versant in particular "boring" details of how information is represented within broader information systems and infrastructures. An information infrastructure is, by Starr's account, highly relational. Information and infrastructures mean different things to different people at different points in time. Data is no different. In fact, there is a soundbite that you may come across in the data curation community that goes like this:
 
 > One person's metadata is another person's data.
 
@@ -69,22 +69,21 @@ Writing an XML schema that defines properties of Blake's work - like anthology, 
 </anthology>
 ```
 
-(Before we continue, you might be wondering, "how does that look like a tree?". Or maybe you're not wondering, but I [Norlander] did. In fact, the term tree in this case comes from a mathematical definition of a tree, not the definition of that large plant in your yard. For more information, check out this [Wikipedia](https://en.wikipedia.org/wiki/XML_tree) article.)
+(Before we continue, you might be wondering, "how does that look like a tree?". While the term 'tree' in this case comes from a [mathematical definition of a tree](https://en.wikipedia.org/wiki/XML_tree), you can change the way to draw the tree to see where that definition came from ![Image of tree drawn to follow the above XML's structure]({{site.baseurl}}/_images/blake-tree.jpg)). 
 
 The XML tree provides for relations between data both through the schema, and through the syntax. An anthology contains a poem, a poem contains stanzas, and stanzas contain lines. Each indentation in the above XML nests these elements further inside one another. This is what creates the "hierarchy" that our computers interpret as a tree.   
 
-The tag that closes the poem and contains a note `<!-- more poems go here -->` is important. This hints at the idea that we can add more poems with more lines to the anthology markup by simply using the pre-defined schema. So, similar to a table we have the ability through logic to relate data to one another, but we also gain the ability to use the syntax and nesting to further refine and express relationships between data that are hierarchical. The ability to express relationships in structured text is what makes a hierarchical form like a tree so valuable for publishing electronic content.
+The tag that closes the poem and contains a note `<!-- more poems go here -->` is important. This hints at the idea that we can add more poems with more lines to the anthology markup by simply using the pre-defined schema (adding more 'branches', to stay within our tree metaphor). So, similar to a table we have the ability through logic to relate data to one another, but we also gain the ability to use the syntax and nesting to further refine and express relationships between data that are hierarchical. The ability to express relationships in structured text is what makes a hierarchical form like a tree so valuable for publishing electronic content.
 
 ## Data Independence
 What I've been describing in the tables and trees sections thus far - this idea of abstracting away from physical storage to a logical level of data structuring - is the concept of **Data Independence**.
 
-By organizing data at a logical level, either through relations (e.g. a relational database) or element sets based on a pre-defined schema (e.g. hierarchical models using XML or JSON), we can easily add new data or new relations without having to rewrite our entire database system (or our XML schema). That is, data independence is the ability to present the stored information (at the physical level) in different ways to different users. So we can offload the organization and structure to a general schema, and we can then build rich graphic user interfaces that display the data any way we choose. Data independence also means that we can easily modify and update applications that depend on this structured schema, and minimally impact end-users that interact with a graphic user interface. Both tables and trees make this logical level data independence possible, and allow data to grow (or scale) more or less infinitely.
+By organizing data at a logical level, either through relations (e.g. a relational database) or element sets based on a pre-defined schema (e.g. hierarchical models using XML or JSON), we can easily add new data or new relations without having to rewrite our entire database system (or our XML schema). That is, data independence is the ability to present the stored information (at the physical level) in different ways to different users. So we can offload the organization and structure to a general schema, and we can then build rich graphic user interfaces that display the data any way we choose. Data independence occurs at two different levels: 
+- _Physical independence_ means that the logical organization of your data functions independently of how it is physically stored on your computer. If you can move your database to a different storage or operating system without issues, it's physically independent. 
+- _logical independence_ refers to making accessing, viewing the data independent from its logical organization. If you can, e.g., add elements to your data (i.e. change its logical organization) without affecting existing applications, you have logical independence.
 
-The following image depicts the relationship between the concepts we've been talking about thus far. Note that a separation between the physical level and the logical level is what enables data independence. Here the logical level practically is split again into three areas where, as data curators, we manage different aspects of our user's experience. At the schema level we define the logical representation and relationship between data, at the data level we manage information, create and edit metadata, and provide documentation, and at the user interface we provide data to end users (in this picture, as a drop down menu).
-<figure>
-  <img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/Simpsons-Abstractions.jpg" alt="Data Abstraction Levels of Homer Simpson" width="800"/>
-  <figcaption>Figure 1</figcaption>
-</figure>
+Note that data independence is a goal, not a property for data organization. In practice, reasonably good practices make physical independence pretty straightforward, but it can still break easily: conventions such as avoiding spaces, special characters, or even uppercase letters in filenames intend to preserve physical independence across different operating and storage systems. Logical independence is even trickier to achieve. It's all too easy to structure a data retrieval comman in a way that it'll break on database reorganization. Well thought-out data structures are essential to ensure logical independence -- that's your job, as a data curator.
+
 ## Trees and Tables
 You may have left the last section thinking to yourself, "If the syntax of a markup language affords us so much expressive power, why not use a markup language like XML for all data?"
 
@@ -229,9 +228,10 @@ In this chapter I introduced a number of concepts. Here's a brief review:
 - Data Independence is the ability to separate data encodings from the logical level where it is managed and made accessible to users. By making data independent from its storage we can easily modify, and add data at the logical level.
 - Notation languages, such as XML, JSON, and RDF all have tradeoffs. In DC I we described these tradeoffs in terms of expressivity and tractability. In DC II we introduce the idea of "intelligence" to data representation, but we hold this at arms length because it comes at such a high curation cost.
 
-# Lecture
 
-<iframe width=853 height=482 frameborder="0" scrolling="no" src="https://screencast-o-matic.com/embed?sc=cYfQcuavjV&v=5&ff=1" allowfullscreen="true"></iframe>
+## Lecture 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3bfdfY4cJak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -252,6 +252,8 @@ For a bit of historical background, Ch 1 of this book (pages 1-13) provides an e
 
 - Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. [PDF](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/Data-on-the-Web-Skeleton.pdf)
 
+
+
 <h2><a id="Exercise">Exercise</a></h2>
 In preparation for our class on `Tidy Data` next week we will attempt to add some structure to a rather innocuous piece of information that is published to the web and that maybe you've encountered during a Seattle winter of boredom: Chocolate Chip Cookie Recipes.  
 
@@ -261,4 +263,5 @@ Some things to keep in mind:
 
 - Don't worry about using established metadata schema for this exercise (we'll get to that later). You can make-up the schema (i.e. the column names or tags used to indicate the variable, the namespaces) and you don't need to create definitions for the metadata, just make sure your terms are fairly self-explanatory (e.g. use `ingredient` instead of `thing`).
 - There isn't a "right" answer to which representation you choose
-- On the [canvas forum](https://canvas.uw.edu/courses/1641385/discussion_topics/8051808), share your representation with the class, and explain why you made the choices you did. What was difficult, what was easy? You can share this in whatever form you like (create one directly in Canvas, link to a Google Doc, Upload an Excel file, post a .jpg of your hand-drawn representation, etc.)
+- I think you will get more out of this exercise if you attempt it without the use of an AI tool, but currernt LLMs are often pretty good at data transformation. If you do use an LLM, please don't stick to its first response but try to further prompt it to improve its represenation (and report the 'evolution' of your answer in the response.)
+- On the [canvas forum](https://canvas.uw.edu/courses/1724350/discussion_topics/8846740), share your representation with the class, and explain why you made the choices you did. What was difficult, what was easy? You can share this in whatever form you like (create one directly in Canvas, link to a Google Doc, Upload an Excel file, post a .jpg of your hand-drawn representation, etc.)

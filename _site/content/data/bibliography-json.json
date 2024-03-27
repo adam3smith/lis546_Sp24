@@ -1,0 +1,50 @@
+[
+	{
+		"id": "http://zotero.org/users/2433/items/XNJW8UPS",
+		"type": "article-journal",
+		"abstract": "How do researchers in fieldwork-intensive disciplines protect sensitive data in the field, how do they assess their own practices, and how do they arrive at them? This article reports the results of a qualitative study with 36 semi-structured interviews with qualitative and multi-method researchers in political science and humanitarian aid/migration studies. We find that researchers frequently feel ill-prepared to handle the management of sensitive data in the field and find that formal institutions provide little support. Instead, they use a patchwork of sources to devise strategies for protecting their informants and their data. We argue that this carries substantial risks for the security of the data as well as their potential for later sharing and re-use. We conclude with some suggestions for effectively supporting data management in fieldwork-intensive research without unduly adding to the burden on researchers conducting it.",
+		"container-title": "Journal of Privacy and Confidentiality",
+		"DOI": "10.29012/jpc.846",
+		"ISSN": "2575-8527",
+		"issue": "2",
+		"language": "en",
+		"license": "Copyright (c) 2023 Sebastian Karcher, Sefa Secen, Nic Weber",
+		"note": "number: 2",
+		"source": "journalprivacyconfidentiality.org",
+		"title": "Protecting Sensitive Data Early in the Research Data Lifecycle",
+		"URL": "https://journalprivacyconfidentiality.org/index.php/jpc/article/view/846",
+		"volume": "13",
+		"author": [
+			{
+				"family": "Karcher",
+				"given": "Sebastian"
+			},
+			{
+				"family": "Secen",
+				"given": "Sefa"
+			},
+			{
+				"family": "Weber",
+				"given": "Nic"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2024",
+					1,
+					19
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					12,
+					6
+				]
+			]
+		}
+	}
+]
