@@ -20,4 +20,4 @@ links:
 - [Read one additional Data on the Web - Use Case from this list](https://www.w3.org/TR/dwbp-ucr/)
 
 **Suggested Readings:**
-- [Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML](/content/readings/Data-on-the-Web-Skeleton.pdf)
+- [Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML](<{{site.baseurl}}/content/readings/Data-on-the-Web-Skeleton.pdf)
