@@ -7,21 +7,23 @@ thumbnail: /static_files/presentations/tidy.png
 links:
     - url: 
       name: video
-    - url: # /content/tidy-data.html
+    - url: /content/tidy-data.html
       name: content
-    - url: # /content/tidy-data.html#Exercise
+    - url: /content/tidy-data.html#Exercise
       name: exercise
 ---
 **Required Readings:**
-- <!--[Course Content]({{ site.baseurl }}/lis546_Sp24/content/tidy-data.html)-->
+- [Course Content]({{ site.baseurl }}lis546_Sp24/content/tidy-data.html)
 - [Rowson and Munoz (2016) Against Cleaning](http://curatingmenus.org/articles/against-cleaning/)
-- [Wickham, H. (2014), “Tidy Data,” Journal of Statistical Software, 59, 1–23](https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf)
+- _Either_ [Wickham, H. (2014), “Tidy Data,” Journal of Statistical Software, 59, 1–23](https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf) (heavier on theory) _or_ [Wickham, H. (2023), “Tidying Data,” in _R for Data Science, 2nd edition, 59, 1–23](https://r4ds.hadley.nz/data-tidy.html) (heavier on the application -- I recommend running the sample code in R as you go along)
+- Healy, K. (2024), [Slides for "Tidying Data"](https://socdata.co/slides/03-slides-tidy-data.html#/title-slide) in his _Data Wrangling and Visualization with R_ course. Up to section on "Pivot" (rest is optional)
+
+
 
 **Suggested Readings:**
-- [Wickham, H. (2014), “Tidy Data,” Journal of Statistical Software (more code & examples than required reading)](https://r4ds.had.co.nz/tidy-data.html)
-- [Tierney, N. J., & Cook, D. H. (2018). Expanding tidy data principles to facilitate missing data exploration, visualization and assessment of imputations](https://arxiv.org/abs/1809.02264)
-- [Leek (2016) Non-tidy data](https://simplystatistics.org/2016/02/17/non-tidy-data/)
 - [Broman, K. W., & Woo, K. H. (2018). Data organization in spreadsheets. The American Statistician, 72(1), 2-10](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
+- [Tierney, N. J., & Cook, D. H. (2018). Expanding tidy data principles to facilitate missing data exploration, visualization and assessment of imputations](https://arxiv.org/abs/1809.02264)
+- [Leek (2016) Non-tidy data](https://simplystatistics.org/posts/2016-02-17-non-tidy-data/)
 - [Tort, F. (2010). Teaching spreadsheets: Curriculum design principles](https://arxiv.org/abs/1009.2787)
 - [Mack, K., Lee, J., Chang, K., Karahalios, K., & Parameswaran, A. (2018, April). Characterizing scalability issues in spreadsheet software using online forums](https://arxiv.org/abs/1801.03829)
-- [Formatting data tables in spreadsheets: Data Carpentry Lesson](https://datacarpentry.org/2015-05-03-NDIC/excel-ecology/01-format-data.html)
+- [Data Carpentry: Data Organization in Spreadsheets for Ecologists ](https://datacarpentry.org/spreadsheet-ecology-lesson/)

@@ -3,7 +3,7 @@ layout: default
 ---
 # Tidy Data
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander**  
+**Editing & Updates: Bree Norlander, Sebastian Karcher**  
 
 The idea of "tidy data" underlies principles in data management, and database administration that have been around for decades. In 2014, Hadley Wickham started to formalize some of these rules in what he called "Principles for Tidy Data." [PDF](https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf)
 
@@ -26,13 +26,13 @@ We will be focused on tidying a single table for most of this module, but you ca
 
 Put simply, for any given table we associate one observation with one or more variables. Each variable in a tidy dataset has a standard unit of measurement for its values.  
 <figure>
-  <img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/TidyData-Pic.png" alt="Image of tidy data in rows and columns" width="800"/>
+  <img src="{{site.baseurl}}/_images/TidyData-Pic.png" alt="Image of tidy data in rows and columns" width="800"/>
   <figcaption>This image is from the open access textbook <a href="https://r4ds.had.co.nz/tidy-data.html#fig:tidy-structure" target="_blank">R for Data Science</a>.</figcaption>
 </figure>
 <br>
 This image depicts the structure of a tidy dataset.
 
-The following tidy data table includes characters appearing in a Lewis Caroll [novel](https://en.wikipedia.org/wiki/Sylvie_and_Bruno). The characters are observations, and the variables that we associate with each observation are `Age` and `Height`. Each variable has a standard unit of measurement.
+The following tidy data table includes characters appearing in a [Lewis Caroll novel](https://en.wikipedia.org/wiki/Sylvie_and_Bruno). The characters are observations, and the variables that we associate with each observation are `Age` and `Height`. Each variable has a standard unit of measurement.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -262,8 +262,8 @@ In sum, the pivot works to either:
 1. Transform variables so that they correspond with just one observation. We do this by adding new observations. This makes a tidy dataset longer.
 2. Transform values that are acting as variables. We do this by creating new variables and replacing the incorrect observation. This makes a tidy dataset wider.
 
-## Separating and Gathering
-Two other types of transformations are often necessary to create a tidy dataset: **Separating** values that may be incorrectly combined, and **Gathering** redundant values into a single variable. Both of these transformations are highly context dependent.
+## Separating and Combining
+Two other types of transformations are often necessary to create a tidy dataset: **Separating** values that may be incorrectly combined, and **Combining** redundant values into a single variable. Both of these transformations are highly context dependent.
 
 ### Separating
 Separating variables is a transformation necessary when two distinct values are used as a summary. This is a common shorthand method of data entry.
@@ -343,8 +343,8 @@ To separate these values we would simply create a new column for each of the var
 <br>  
 By separating the values into their own columns we know have a tidy dataset that includes four variables for each observation. Again, the explanation of units of measurement and the calculation used to creat the "GDP per capita" column should be included in the metadata.
 
-### Gathering
-Gathering variables is the exact opposite of separating - instead of having multiple values in a single variable, a data collector may have gone overboard in recording their observations and unintentionally created a dataset that is too granular (that is, has too much specificity). Generally, granular data is good - but it can also create unnecessary work for performing analysis or interpreting data when taken too far.
+### Combining
+Combining variables is the exact opposite of separating - instead of having multiple values in a single variable, a data collector may have gone overboard in recording their observations and unintentionally created a dataset that is too granular (that is, has too much specificity). Generally, granular data is good - but it can also create unnecessary work for performing analysis or interpreting data when taken too far.
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -421,11 +421,17 @@ Our dataset now has just two variables - the time when a species was observed, a
 
 As I said in opening this section - the assumptions we make in tidying data are highly context dependent. If we were working in a field where granular data like `seconds` was not typical, this kind of representation might not be necessary. But, if we want to preserve all of the information that our dataset contains then appealing to broad standards is a best practice.
 
+At this point, it's important to note a distinction between "clean" and "tidy" data. Clean data conforms to standard best practices (see e.g. Healy's slides or the Broman & Woo suggested reading) such as no duplicate headers, no color-coding to convey inmportant information, consistent entry, etc. You almost (see Rowson & Muñoz for a caveat) always want clean data. 
+
+> Tidy data is a specific convention for clean data. It has a number of advantages (especially when you're working with R and mostly also python), but it's not necessarily universally preferable the way clean data are. 
+
+Moreover, converting clean data to tidy data is relatively easy to automate. Cleaning up messy data is time-consuming and error-prone.
+
 ## Tidy Data in Practice
 
 For the purposes of this class, using tidy data principles in a specific programming language is not necessary. Simply understanding common transformations and principles are all that we need to start curating tidy data.
 
-But, it is worth knowing that the tidy data principles have been implemented in a number of executable libraries using `R`. This includes the suite of libraries known as the [tidyverse](https://www.tidyverse.org/). A nice overview of what the tidyverse libraries make possible working with data in `R` is summarized in this [blogpost](https://rviews.rstudio.com/2017/06/08/what-is-the-tidyverse/) by Joseph Rickert. (*Note from Bree:* I love `R` and use it everyday!)
+But, it is worth knowing that the tidy data principles have been implemented in a number of executable libraries using `R`. This includes the suite of libraries known as the [tidyverse](https://www.tidyverse.org/). A nice overview of what the tidyverse libraries make possible working with data in `R` is summarized in this [blogpost](https://rviews.rstudio.com/2017/06/08/what-is-the-tidyverse/) by Joseph Rickert. 
 
 There are also a number of beginner [tutorials](https://education.rstudio.com/learn/beginner/) and [cheat-sheets](https://rstudio.com/resources/cheatsheets/) available to get started. If you come from a database background, I particularly like this [tutorial](https://idc9.github.io/stor390/notes/tidy_data/tidy_data.html#relational_data_and_joining_tables) on tidy data applied to the relational model by my colleague [Iain Carmichael](https://idc9.github.io/).
 
@@ -887,7 +893,7 @@ But this is not all of the information that our `Name` variable contains. It als
 
 Take for example our third observation. The subject "Vermeer" has an object (the painting) "View of Delft" being connected by a predicate "painted". In plain language we could easily represent this triple as "Vermeer painted View_of_Delft".
 
-But, our first observation is much more complex and not well suited for the triple form. The plain language statement would look somoething like "The studio of Rembrandt sponsored Govaert Flink in painting 'Isaac blessing Jacob'" (The painting in question is [here](https://upload.wikimedia.org/wikipedia/commons/b/b2/Amsterdam_-_Rijksmuseum_1885_-_The_Gallery_of_Honour_%281st_Floor%29_-_Isaac_blessing_Jacob_1638_by_Govert_Flinck.jpg).)
+But, our first observation is much more complex and not well suited for the triple form. The plain language statement would look somoething like "The studio of Rembrandt sponsored Govaert Flink in painting 'Isaac blessing Jacob'" (The [painting in question is here](https://upload.wikimedia.org/wikipedia/commons/b/b2/Amsterdam_-_Rijksmuseum_1885_-_The_Gallery_of_Honour_%281st_Floor%29_-_Isaac_blessing_Jacob_1638_by_Govert_Flinck.jpg).)
 
 To represent these ambiguities in our tidy data, we need to create some way to qualify and attribute the different works to different people. Warning in advance, this will be a VERY wide pivot.
 
@@ -963,9 +969,12 @@ We also created a representation of the artist that is numbered - so that we cou
 
 Each of these approaches to disambiguation is based on a "separating" transformation through a wide pivot. We tidy the dataset by creating qualifiers, and add variables to represent multiple artists.
 
-This solution is far from perfect, and we can imagine this going quickly overboard without some control in place for how we will name individuals and how we will assign credit for their work (imagine creating the entry for the [NAMES Project AIDS Memorial Quilt](https://en.wikipedia.org/wiki/NAMES_Project_AIDS_Memorial_Quilt). But, this example also makes clear that the structural decisions are ours to make as data curators. We can solve each transformation problem in multiple ways. The key to tidy data is having a command of the different strategies for transforming data, and knowing when and why to apply each transformation.
+This solution is far from perfect, and we can imagine this going quickly overboard without some control in place for how we will name individuals and how we will assign credit for their work (imagine creating the entry for the [NAMES Project AIDS Memorial Quilt](https://en.wikipedia.org/wiki/NAMES_Project_AIDS_Memorial_Quilt)). But, this example also makes clear that the structural decisions are ours to make as data curators. We can solve each transformation problem in multiple ways. The key to tidy data is having a command of the different strategies for transforming data, and knowing when and why to apply each transformation.
 
 In future chapters we will further explore the idea of appealing to an "authority control" when making these types of decisions around tidying data and metadata.
+
+## A note on language
+
 
 ## Summary
 In this chapter we've gone full tilt on the boring aspects of data structuring. In doing so, we tried to adhere to a set of principles for tidying data:
@@ -989,39 +998,29 @@ I also introduced the idea of using "authority control" for normalizing or makin
 
 **Required**
 
-- Rowson and Munoz (2016) Against Cleaning: [http://curatingmenus.org/articles/against-cleaning/](http://curatingmenus.org/articles/against-cleaning/)
-- Wickham, H. (2014), “Tidy Data,” Journal of Statistical Software, 59, 1–23 [https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf](https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf) (Optional - same article with more code and examples [https://r4ds.had.co.nz/tidy-data.html](https://r4ds.had.co.nz/tidy-data.html))
+**Required Readings:**
+- [Course Content]({{ site.baseurl }}lis546_Sp24/content/tidy-data.html)
+- [Rowson and Muñoz (2016) Against Cleaning](http://curatingmenus.org/articles/against-cleaning/)
+- _Either_ [Wickham, H. (2014), “Tidy Data,” Journal of Statistical Software, 59, 1–23](https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf) (heavier on theory) _or_ [Wickham, H. (2023), “Tidying Data,” in _R for Data Science, 2nd edition, 59, 1–23](https://r4ds.hadley.nz/data-tidy.html) (heavier on the application -- I recommend running the sample code in R as you go along)
+- Healy, K. (2024), [Slides for "Tidying Data"](https://socdata.co/slides/03-slides-tidy-data.html#/title-slide) in his _Data Wrangling and Visualization with R_ course. Up to section on "Pivot" (rest is optional)
 
-**Optional**
 
-Extending tidy data principles:
 
-- Tierney, N. J., & Cook, D. H. (2018). Expanding tidy data principles to facilitate missing data exploration, visualization and assessment of imputations. arXiv preprint [arXiv:1809.02264](https://arxiv.org/abs/1809.02264). (There are a number of very helpful R examples in that paper)
-- Leek (2016) Non-tidy data [https://simplystatistics.org/2016/02/17/non-tidy-data/](https://simplystatistics.org/2016/02/17/non-tidy-data/)
+**Suggested Readings:**
+- [Broman, K. W., & Woo, K. H. (2018). Data organization in spreadsheets. The American Statistician, 72(1), 2-10](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) (a modern classic -- Healy covers some of it in his slides)
+- [Tierney, N. J., & Cook, D. H. (2018). Expanding tidy data principles to facilitate missing data exploration, visualization and assessment of imputations](https://arxiv.org/abs/1809.02264)
+- [Leek (2016) Non-tidy data](https://simplystatistics.org/posts/2016-02-17-non-tidy-data/) (why and when you might not want tidy data)
+- [Mack, K., Lee, J., Chang, K., Karahalios, K., & Parameswaran, A. (2018, April). Characterizing scalability issues in spreadsheet software using online forums](https://arxiv.org/abs/1801.03829)
+- [Data Carpentry: Data Organization in Spreadsheets for Ecologists ](https://datacarpentry.org/spreadsheet-ecology-lesson/) (another applied lesson, includes some of the materials from lecture)
 
-Reading about data structures in spreadsheets:
-
-- Broman, K. W., & Woo, K. H. (2018). Data organization in spreadsheets. The American Statistician, 72(1), 2-10. [https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
-
-Teaching or learning through spreadsheets:
-
-- Tort, F. (2010). Teaching spreadsheets: Curriculum design principles. arXiv preprint [arXiv:1009.2787](https://arxiv.org/abs/1009.2787).
-
-Spreadsheet practices in the wild:
-
-- Mack, K., Lee, J., Chang, K., Karahalios, K., & Parameswaran, A. (2018, April). Characterizing scalability issues in spreadsheet software using online forums. In Extended Abstracts of the 2018 CHI Conference on Human Factors in Computing Systems (pp. 1-9). [Online](https://dl.acm.org/doi/10.1145/3170427.3174359)
-
-Formatting data tables in spreadsheets:
-
-- [Data Carpentry lesson](https://datacarpentry.org/2015-05-03-NDIC/excel-ecology/01-format-data.html)
 
 <h2><a id="Exercise">Exercise</a></h2>
-Last week you had the opportunity to think about how to transform the traditional layout of a recipe into the form of data. This week, we present to you chocolate chip cookie recipes in "parametric" [form](https://d3vjjov8ymzzxi.cloudfront.net/chefsteps-com-files/chefsteps-cookie-table.pdf) from ChefSteps. It appears that the plan was to take a bunch of different recipes and average them. (Creative!) Here is the [data](https://docs.google.com/spreadsheets/d/11H6XGUWNVAsIbtUHCrjFsk4iLViELHG4CZKmQEyyWSA/edit#gid=0) behind this infographic in a very messy spreadsheet. Credit to [Jenny Bryan](https://jennybryan.org/about/) for this example of messy data.
+Last week you had the opportunity to think about how to transform the traditional layout of a recipe into the form of data. This week, we present to you chocolate chip cookie recipes in ["parametric" form](https://d3vjjov8ymzzxi.cloudfront.net/chefsteps-com-files/chefsteps-cookie-table.pdf) from ChefSteps. It appears that the plan was to take a bunch of different recipes and average them. (Creative!) Here is the [data](https://docs.google.com/spreadsheets/d/11H6XGUWNVAsIbtUHCrjFsk4iLViELHG4CZKmQEyyWSA/edit#gid=0) behind this infographic in a very messy spreadsheet. Credit to [Jenny Bryan](https://jennybryan.org/about/) for this example of messy data.
 
 This dataset definitely does not meet the definition of "tidy". There are a number of ways we could restructure this data so that it follows some best practices in efficient and effective reuse. Your assignment is as follows:
 
-1. Post to the [Canvas discussion board](https://canvas.uw.edu/courses/1641385/discussion_topics/8051894), your thoughts on what should make up the:
+1. Post to the [Canvas discussion board](https://canvas.uw.edu/courses/1724350/discussion_topics/8861640), your thoughts on what should make up the:
     - observations (rows)
-    - variables (columns
-2. Test out your choices by creating a sample dataset with *at least* 3 rows and 3 columns and the associated values. Post your mockup (an Excel spreadsheet, a screenshot, a photo - whatever works).
+    - variables (columns)
+2. Test out your choices by creating a sample dataset with *at least* 3 rows and 3 columns and the associated values. Post your mockup (an link to a google spreadsheet, a screenshot, a photo - whatever works).
 3. Discuss what was easy and difficult about structuring this data.
