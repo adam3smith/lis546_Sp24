@@ -5,7 +5,7 @@ title: "Week 3: Tidy Data"
 tldr: "Overview of tidy data principles as they relate to data curation, plus extending tidy data to some of the underlying principles in organizing, managing, and preparing all kinds of structured data for meaningful use."
 thumbnail: /static_files/presentations/tidy.png
 links:
-    - url: 
+    - url: https://youtu.be/mrBufixbz5Y?si=6Z7Y8P5t-eiTkSLs
       name: video
     - url: /content/tidy-data.html
       name: content

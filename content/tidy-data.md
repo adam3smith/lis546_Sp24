@@ -501,6 +501,7 @@ For these explanations I'll use Matthew's data because it represents a wonderful
   </tr>
 </table>
 <br>  
+
 ### Dates
 In the previous section I described the adherence to a standard, ISO 8601, for structuring time based on the observation of a species. We can imagine a number of use cases where this rigid standard would not be useful for structuring a date or time. In historical data, for example, we may not need the specificity of an ISO standard, and instead we may need to represent something like a time period, a date range, or an estimate of time. In the museum catalog dataset we see three different ways to represent a date: After a date, [circa](https://en.wikipedia.org/wiki/Circa) a year, and as a data error in the catalog (`16220`).
 
@@ -974,7 +975,7 @@ This solution is far from perfect, and we can imagine this going quickly overboa
 In future chapters we will further explore the idea of appealing to an "authority control" when making these types of decisions around tidying data and metadata.
 
 ## A note on language
-
+You'll get a sense of this when reading the piece by Rowson and Muñoz: the words we describe when we work on cleaning up data are not neutral: We refer to data 'tidying' and 'cleaning'. When we remove diacritics from filenames, we may even call that 'sanitizing'. These are not by themselves deeply problematic words (though you will find plenty of those across information science). But you should wonder -- clean from what? What's the order that you're tidying up? What are you sanitizing away? Sometimes the answer will be "nothing of importance" -- often, messy data is just sloppy work. But on other occasions, what you find a 'mess' might be meaningful for someone else, and what you want to sanitize may be an important part of someone's identity.  
 
 ## Summary
 In this chapter we've gone full tilt on the boring aspects of data structuring. In doing so, we tried to adhere to a set of principles for tidying data:
@@ -986,17 +987,15 @@ We focused on three types of transformations for tidying data:
 
 - Pivots - which are either wide or long.
 - Separating - which creates new variables
-- Gathering - which collapses variables  
+- Combining - which collapses variables  
 
 I also introduced the idea of using "authority control" for normalizing or making regular data that does not neatly conform to the conventions spelled out by "Tidy Data Principles".
 
-# Lecture
+## Lecture
 
-<iframe width=853 height=482 frameborder="0" scrolling="no" src="https://screencast-o-matic.com/embed?sc=cYfo0QzbHl&v=6&ff=1&title=0&controls=1" allowfullscreen="true"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mrBufixbz5Y?si=ZfMLhUUr6fX3IUEj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Readings
-
-**Required**
+## Readings
 
 **Required Readings:**
 - [Course Content]({{ site.baseurl }}lis546_Sp24/content/tidy-data.html)
