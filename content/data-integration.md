@@ -118,7 +118,8 @@ Regardless of our decision it is important to note that we are not just changing
 
 <img src="{{site.baseurl}}_images/3_tables_integrated.png" alt="Title is Polar Bears. There is one table, with two columns titled Location and BirthWeight_Ounces" width="300"/>
 
-Let's look at differences in observational depth from two variables in the 311 data described above.
+### Standardize Variables
+Let's look at another example from two variables in the 311 data described above.
 
 <img src="{{site.baseurl}}_images/CreatedDate_2tables.png" alt="Two tables of Created Dates with different levels of granularity" width="500"/>
 
@@ -199,7 +200,7 @@ View(GDPandExchange)
 ```
 The new table will look something like:
 
-<img src="{{site.baseurl}}}_images/GDPandExchange_Data.png" alt="GDP 2018 Table" width="300"/>
+<img src="{{site.baseurl}}_images/GDPandExchange_Data.png" alt="GDP 2018 Table" width="300"/>
 
 A helpful note appears thanks to `dplyr` that clarifies some of the magic that just happened:
 
@@ -258,25 +259,28 @@ To overcome these challenges I proposed a set of `integration precursors` that i
 
 Once these tasks were complete we looked at practical ways to combine two tables, including horizontal and vertical integration. We also were introduced to the magic of `dplyr` in performing simple data integrations in `R`.
 
-# Lecture
+## Lecture
 
 
 
-# Readings
+## Readings
 Data integration is a topic that can be incredibly complex, and much of the published literature fails to make this an approachable or even realistic read for a course like DC II. But below are two readings that I highly recommend:
 
-- This is a really detailed example of some serious curation activity. Don't worry about understanding the nuances of the data, just read it for the example: Whong, Chris (2020) "[Taming the MTA’s Unruly Turnstile Data](ttps://medium.com/qri-io/taming-the-mtas-unruly-turnstile-data-c945f5f96ba0)"
+- This is a really detailed example of some serious curation activity. Don't worry about understanding the nuances of the data, just read it for the example: Whong, Chris (2020) "[Taming the MTA’s Unruly Turnstile Data](https://medium.com/qri-io/taming-the-mtas-unruly-turnstile-data-c945f5f96ba0)"
 - The Wikipedia article on [data integration](https://en.wikipedia.org/wiki/Data_integration) is a phenomenal overview that should compliment the content of this module
 
 *Optional*  
 
+Data integration doesn't just apply to quantitative data. This piece on secondary analysis of qualitative data touches on many points discussed above
+- [Kern, F. G., & Mustasilta, K. (2023). Beyond Replication: Secondary Qualitative Data Analysis in Political Science. Comparative Political Studies, 56(8), 1224-1256. https://doi.org/10.1177/00104140221139388](https://doi.org/10.1177/00104140221139388)
+
 If you are interested in the history of this topic from the perspective of databases I also highly recommend the following:
 
-- Halevy, A., Rajaraman, A., & Ordille, J. (2006, September). Data integration: The teenage years. In Proceedings of the 32nd international conference on Very large data bases (pp. 9-16). [PDF](https://www.cin.ufpe.br/~if696/referencias/integracao/_Data_Integration-The_Teenage_Years.pdf)
+- [Halevy, A., Rajaraman, A., & Ordille, J. (2006, September). Data integration: The teenage years. In Proceedings of the 32nd international conference on Very large data bases (pp. 9-16). PDF](https://www.cin.ufpe.br/~if696/referencias/integracao/_Data_Integration-The_Teenage_Years.pdf)
 
 For a bit of historical background, Ch 1 of this book (pages 1-13) provides an excellent overview of how data were originally made compliant with web standards:
 
-- Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. [PDF]({{site.baseurl}}content/readings/Data-on-the-Web-Skeleton.pdf)
+- [Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. PDF]({{site.baseurl}}content/readings/Data-on-the-Web-Skeleton.pdf)
 
 <h2><a id="Exercise">Exercise</a></h2>
 The exercise this week was inspired by an interesting analysis of New York City 311 data by [Chris Whong](https://twitter.com/chris_whong/status/1240363144654000132) ([archived tweet](https://web.archive.org/web/20210314224906/https://twitter.com/chris_whong/status/1240363144654000132)) who at the beginning of the Covid-19 pandemic did a lot of very interesting data analysis. What he observed back in 2019 was a 1000% increase in "Consumer Complaint" 311 requests after the first recorded case of Covid-19 infection in NYC. This was not without some important external conditions - after this recorded infection there was a more concerted effort by NYC residents to stockpile supplies. Having heard numerous informal complaints of price-gouging the city recommended that consumers report businesses using a 311 hotline.

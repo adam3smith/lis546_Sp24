@@ -21,5 +21,10 @@ links:
 - [Wikipedia article on data integration](https://en.wikipedia.org/wiki/Data_integration)
 
 **Optional Readings:**
-- [Halevy, A., Rajaraman, A., & Ordille, J. (2006, September). Data integration: The teenage years. In Proceedings of the 32nd international conference on Very large data bases (pp. 9-16)](https://www.cin.ufpe.br/~if696/referencias/integracao/_Data_Integration-The_Teenage_Years.pdf)
-- [Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann]({{site.baseurl}}/content/readings/Data-on-the-Web-Skeleton.pdf)
+If you are interested in the history of this topic from the perspective of databases I also highly recommend the following:
+
+- [Halevy, A., Rajaraman, A., & Ordille, J. (2006, September). Data integration: The teenage years. In Proceedings of the 32nd international conference on Very large data bases (pp. 9-16). PDF](https://www.cin.ufpe.br/~if696/referencias/integracao/_Data_Integration-The_Teenage_Years.pdf)
+
+For a bit of historical background, Ch 1 of this book (pages 1-13) provides an excellent overview of how data were originally made compliant with web standards:
+
+- [Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. PDF]({{site.baseurl}}content/readings/Data-on-the-Web-Skeleton.pdf)
