@@ -57,3 +57,4 @@ For this assignment you will create a document that addresses the following:
 - Choose an existing openly available dataset within your topic domain and provide an overview.
 - Choose one potential user (or user group such as “policymaker”). Write their story. What is their use case? What do they want from the collection? What is their goal in accessing the data?
 - Assess the dataset’s ability to meet the users goals. Does this dataset provide them everything they need? How will they access the data? What will they do with the data? What features are missing for your user?
+- Post a link to your user stories document in the [discussion thread on Canvas](https://canvas.uw.edu/courses/1724350/discussion_topics/8887398)

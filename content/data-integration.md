@@ -287,7 +287,7 @@ A simple graph makes this more compelling than the narrative description - we se
 
 Inspired by this creative visualizing of 311 data and by the examples included in the content this week, you will be trying your hands at integrating 311 data from two different cities from a similar time period of March 1, 2020 through May 1, 2020. Lucky for us, there is an existing repository of [311 city data](https://andrew-friedman.github.io/jkan/datasets/). However, retrieving data from some of these repositories can be difficult depending on the size of the data download and the ability to filter before downloading. So I am providing you with datasets to use. (If you're really ambitious and have the time you are more than welcome to choose your own cities and download the data - but don't prioritize this over other work for this and other classes.)
 
-I have provided you with a random sample of [200 rows of data from San Francisco]({{site.baseurl}}content/data/SF_311_Feb-Apr.csv) and [200 rows of data from Boston]({{site.baseurl}}content/data/Boston_311_Feb-Apr.csv). (Note: you should be able to right-click on these links and use "Save Link as" to save the content locally.)
+I have provided you with a random sample of [200 rows of data from San Francisco]({{site.baseurl}}content/data/SF_311_Feb-Apr_sample.csv) and [200 rows of data from Boston]({{site.baseurl}}content/data/Boston_311_Feb-Apr_sample.csv). (Note: you should be able to right-click on these links and use "Save Link as" to save the content locally.)
 
 Your exercise this week is to attempt to integrate (at least some) of the provided data. You may use your favorite tool for working with tables. Examples include: Microsoft Excel, Google Sheets, OpenRefine, R, Python. That said, I very much encourage you to use one of the scripting languages (i.e. R or python) if you're at all familiar. Especially if you're relatively new to the language, LLMs can be very helpful and you should absolutely feel free to use them. This task will be challenging but hopefully rewarding. 
 
@@ -300,6 +300,6 @@ Your exercise this week is to attempt to integrate (at least some) of the provid
 
 **What to turn in:**
 
-Post the following in the [discussion]() for this week's exercise:
+Post the following in the [discussion](https://canvas.uw.edu/courses/1724350/discussion_topics/8887402) for this week's exercise:
 - Provide a table with an example of your integration. You do not need to integrate all 400 rows. Just choose an example to showcase the work you did. You can provide your new table via a Google Sheet, Excel document, .csv, or even a screenshot of the new table from whatever software platform you are using. If you were unable to integrate the the tables, show an example of the two tables and where you got stuck. I'm not promising that this will be easy, but I also don't want you to spend hours on this. Take one hour to make your best attempt and then follow the next step.
 - Provide an explanation (~1 paragraph) of what you tried to integrate the data, and why this was or was not challenging. Was this an example of vertical or horizontal integration (or a combination)?
