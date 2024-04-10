@@ -261,7 +261,7 @@ Once these tasks were complete we looked at practical ways to combine two tables
 
 ## Lecture
 I might have gotten confused between vertical & horizontal integration a couple of times... sorry!
-<iframe width="560" height="315" src="https://youtu.be/Ro06a_LEVOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ro06a_LEVOg?si=ipqSU9y3mi0EwuNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Readings
