@@ -5,7 +5,7 @@ title: "Week 4: Data Integration"
 tldr: "Data integration as it operates at the logical level of tables, and data that feed into user interfaces."
 thumbnail: /static_files/presentations/data-int.png
 links:
-    - url: 
+    - url: https://youtu.be/Ro06a_LEVOg
       name: lecture
     - url: /content/data-integration.html
       name: content
@@ -21,6 +21,9 @@ links:
 - [Wikipedia article on data integration](https://en.wikipedia.org/wiki/Data_integration)
 
 **Optional Readings:**
+Data integration doesn't just apply to quantitative data. This piece on secondary analysis of qualitative data touches on many points discussed above
+- [Kern, F. G., & Mustasilta, K. (2023). Beyond Replication: Secondary Qualitative Data Analysis in Political Science. Comparative Political Studies, 56(8), 1224-1256. https://doi.org/10.1177/00104140221139388](https://doi.org/10.1177/00104140221139388)
+
 If you are interested in the history of this topic from the perspective of databases I also highly recommend the following:
 
 - [Halevy, A., Rajaraman, A., & Ordille, J. (2006, September). Data integration: The teenage years. In Proceedings of the 32nd international conference on Very large data bases (pp. 9-16). PDF](https://www.cin.ufpe.br/~if696/referencias/integracao/_Data_Integration-The_Teenage_Years.pdf)

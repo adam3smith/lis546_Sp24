@@ -260,7 +260,8 @@ To overcome these challenges I proposed a set of `integration precursors` that i
 Once these tasks were complete we looked at practical ways to combine two tables, including horizontal and vertical integration. We also were introduced to the magic of `dplyr` in performing simple data integrations in `R`.
 
 ## Lecture
-
+I might have gotten confused between vertical & horizontal integration a couple of times... sorry!
+<iframe width="560" height="315" src="https://youtu.be/Ro06a_LEVOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Readings
