@@ -3,9 +3,9 @@ layout: default
 ---
 # Data Integration
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander**  
+**Editing & Updates: Bree Norlander, Sebastian Karcher**  
 
-The next four weeks of our class will focus on "grand challenges" in data curation. A [grand challenge](https://en.wikipedia.org/wiki/Grand_Challenges) in this context is a problem that requires sustained research and development activities through collective action. Data integration, packaging, discovery, and meaningful descriptive documentation (metadata) are longstanding grand challenges that are approached through a community of practitioners and researchers in curation. This module focuses on data integration as it operates at the logical level of tables and data that feed into user interfaces.
+The next five weeks of our class will focus on "grand challenges" in data curation. A [grand challenge](https://en.wikipedia.org/wiki/Grand_Challenges) in this context is a problem that requires sustained research and development activities through collective action. Data integration, packaging, ethics, discovery, and meaningful descriptive documentation (metadata) are longstanding grand challenges that are approached through a community of practitioners and researchers in curation. This module focuses on _data integration_ as it operates at the logical level of tables and data that feed into user interfaces.
 
 ## Integration as a Grand Challenge
 
@@ -42,9 +42,9 @@ To overcome difficulties in combining different data tables we can engage with c
 
 ### Modeling Table Content
 
-The first activity in data integration is to informally or formally model the structure of a data table. In DC 1 we created data dictionaries which were focused on providing users of data a quick and precise overview of their contents. Data dictionaries are also a method for informally modeling the content of a dataset so that we, as curators, can make informed decisions about restructuring and cleaning.
+The first activity in data integration is to informally or formally model the structure of a data table. In DC 1, we created data dictionaries which were focused on providing users of data a quick and precise overview of their contents. Data dictionaries are also a method for informally modeling the content of a dataset so that we, as curators, can make informed decisions about restructuring and cleaning.
 
-Here is an example of two data dictionaries for the same conceptual information: 311 service requests to the city of [Chicago, IL](https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy) and [Austin, TX](https://data.austintexas.gov/City-Government/311-Unified-Data-Test-Site-2019/i26j-ai4z) (not especially the section called "Columns in this Dataset"). Intuitively, we would expect that data from these two cities are similar enough in  content that they can be meaningfully combined.
+Here is an example of two data dictionaries for the same conceptual information: 311 service requests to the city of [Chicago, IL](https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy) and [Austin, TX](https://data.austintexas.gov/City-Government/311-Unified-Data-Test-Site-2019/i26j-ai4z) (note especially the section called "Columns in this Dataset"). Intuitively, we would expect that data from these two cities are similar enough in content that they can be meaningfully combined.
 
 If we look at the [purpose of 311](https://www.govtech.com/dc/articles/What-is-311.html) we should be able to imagine at least a few of the columns, before we even dive into an existing dataset. We can probably safely assume there will be:
 
@@ -73,7 +73,7 @@ Additionally, there is a field called `Duplicate` with the [following values](ht
 ,{"duplicate":true}]
 ```
 
-The Austin dataset contains a similar variable `SR_Status` with a description of "Duplicate statuses indicate that issue had previously been reported recently." If we perform our [API magic](https://data.austintexas.gov/resource/i26j-ai4z.json?$select=distinct%20sr_status_desc) again, the values in the field are:
+The Austin dataset contains a similar variable `SR_Status` with a description of "Duplicate statuses indicate that issue had previously been reported recently." If we pserform our [API magic](https://data.austintexas.gov/resource/i26j-ai4z.json?$select=distinct%20sr_status_desc) again, the values in the field are:
 ```
 [{"sr_status_desc":"CancelledTesting"}
 ,{"sr_status_desc":"Closed"}
@@ -90,7 +90,7 @@ The Austin dataset contains a similar variable `SR_Status` with a description of
 ,{"sr_status_desc":"Work In Progress"}]
 ```
 
-So the Austin dataset uses one column to indicate status, including duplicate status, while the Chicago dataset uses two columns to indicate status, with the duplicate value being afforded its own column. Additionally, the Austin dataset is more granular in terms of the variety of statuses they record. To integrate these datasets we would need to decide both how to deal with the duplicate statuses AND we would need to determine which values were important to include and how we would crosswalk the differences. For example, would we collapse the "Closed - Incomplete", "Closed - Incomplete Information", "CancelledTesting", "TO BE DELETED", from the Austin dataset into the simpler "Closed" value used in the Chicago dataset? How would we determine if they had the same meaning?
+So the Austin dataset uses one column to indicate status, including duplicate status, while the Chicago dataset uses two columns to indicate status, with the duplicate value being afforded its own column. Additionally, the Austin dataset is more granular in terms of the variety of statuses they record. To integrate these datasets we would need to decide both how to deal with the duplicate statuses _and_ we would need to determine which values were important to include and how we would crosswalk the differences. For example, would we collapse the "Closed - Incomplete", "Closed - Incomplete Information", "CancelledTesting", "TO BE DELETED", from the Austin dataset into the simpler "Closed" value used in the Chicago dataset? How would we determine if they had the same meaning?
 
 **Semantics**  
 Both datasets include information about the most recent update (response) to the request, but these variables are labeled in slightly different ways - `LAST_MODIFIED_DATE` and `Last Update Date`. This seem like it should be fairly simple to tidy by renaming the data variable (but as we will see, this proves to be more more challenging than just renaming the variable).
@@ -108,7 +108,7 @@ As curators, value granularity prompts a decision about what specificity is nece
 
 A simple example will make this clear. Imagine we have three tables `Location A`, `Location B`, and `Location C`. Each table contains the same variable `BirthWeight`, but the values for `BirthWeight` in each table have a different observational depth. In comparing the values for this variable we might even observe (presumably) different units of measurement.
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/3_tables.png" alt="Title is Polar Bears. There are three tables, Location A, Location B, Location C with one column each titles BirthWeight" width="500"/>
+<img src="{{site.baseurl}}_images/3_tables.png" alt="Title is Polar Bears. There are three tables, Location A, Location B, Location C with one column each titles BirthWeight" width="500"/>
 
 This example looks simple at face value, but will require an important decision for integration. Tables `Location A` and `Location B` both represent observational values of `BirthWeight` as [integers](https://en.wikipedia.org/wiki/Integer) but definitely of different units of measurement. Table `Location C` represents the observational values of `BirthWeight` as a decimal number most likely in the same unit of measurement as `Location B`.
 
@@ -116,15 +116,15 @@ Hopefully there is a data dictionary or text somewhere to indicate that the valu
 
 Regardless of our decision it is important to note that we are not just changing the values, but we are also changing their `encoding` - that is whether they represent integers or decimal numbers. (And we would need to document this change in our documentation). This may also affect their data type, for example [Python](https://www.w3schools.com/python/python_datatypes.asp) has both integer and float (for decimal values) data types. Here is one possible integration solution:
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/3_tables_integrated.png" alt="Title is Polar Bears. There is one table, with two columns titled Location and BirthWeight_Ounces" width="300"/>
+<img src="{{site.baseurl}}_images/3_tables_integrated.png" alt="Title is Polar Bears. There is one table, with two columns titled Location and BirthWeight_Ounces" width="300"/>
 
 Let's look at differences in observational depth from two variables in the 311 data described above.
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/CreatedDate_2tables.png" alt="Two tables of Created Dates with different levels of granularity" width="500"/>
+<img src="{{site.baseurl}}_images/CreatedDate_2tables.png" alt="Two tables of Created Dates with different levels of granularity" width="500"/>
 
 Chicago represents time of a 311 report following a `MM/DD/YYYY HH:MM:SS 12HR` form, while Austin represents this same information with `YYYY MON DD HH:MM:SS 12HR`
 
-The observational depth (granularity) is the same in both tables but the formats of `date` in both datasets differ (and neither are ISO 8601).
+The observational depth (granularity) is the same in both tables but the formats of `date` in both datasets differ (and neither are ISO 8601???).
 
 If we want to integrate these two tables then we have to decide how to standardize the values.
 
@@ -134,15 +134,15 @@ Regardless of how we decide to standardize this data, what we have to try to ret
 
 ### Determine Variable Homogeneity
 
-The last integration precursor that we'll discuss has to do with the homogeneity of a variable. In modeling two or more tables for potential integration we will seek to define and describe which variables are present, but we've not yet identified whether or not two variables can be reliably combined. To make this decision we need to first determine the goals of the integration. Some general criteria to consider when thinkng about the goals of integration are as follows:
+The last integration precursor that we'll discuss has to do with the homogeneity of a variable. In modeling two or more tables for potential integration we will seek to define and describe which variables are present, but we've not yet identified whether or not two variables can be reliably combined. To make this decision, we need to first determine the goals of the integration. Some general criteria to consider when thinkng about the goals of integration are as follows:
 
 - **Analysis and Computation**: If we are optimizing data integration for easing analysis then we want high amount of homogeneity in the variables we will combine.
 - **Synthesis**: If we are optimizing for a more general purpose, such as the ability to synthesize results from two different datasets, then we can likely afford to combine variables that may have less homogeneity
-- **Statistical Significance**: If we expect to create statistical summaries that require significant results (that is we will make some decision, forecast, or generalization based on our statistical analysis) then it is of the utmost importance that the combined variables have high homogeneity. But, if all that we require is a rough sense of when or where an observation occurs then low homogeneity is acceptable.
+- **Statistical Significance**: If we expect to create statistical summaries that require significant results (that is, we will make some decision, forecast, or generalization based on our statistical analysis) then it is of the utmost importance that the combined variables have high homogeneity. But, if all that we require is a rough sense of when or where an observation occurs then low homogeneity is acceptable.
 
 An example of variable homogeneity will help make these points clear. The Chicago and Austin tables each contain a variable that roughly corresponds with the "type" of 311 request or report being made. Both tables also contain a column with a short code. If we pay attention closely to the values in these two tables we can determine that the `SR_Type` and `SR Description` are homogeneous. That is, the Chicago table and the Austin table have similar information but use slightly different semantic values to control the variable.
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/SR_Type_and_Description_2tables.png" alt="Homogeneous Tables Description Variable and SR Type Variable" width="700"/>
+<img src="{{site.baseurl}}_images/SR_Type_and_Description_2tables.png" alt="Homogeneous Tables Description Variable and SR Type Variable" width="700"/>
 
 Integrating these two variables in the same table seems possible, but we have a decision to make: We can either combine the two variables and leave the semantic value with low homogeneity, or we can create something like a controlled vocabulary for describing the type of 311 request being made and then normalize the data so that each value is transformed to be compliant with our vocabulary. For example, `Traffic Signal Out Complaint` in the Chicago table, and `Traffic Signal - Maintenance` in the Austin table both have to do with a report being made about traffic signals. We could create a broad category like `Traffic Signals` and then transform (that is, change the values) accordingly. But, we have only determined this step is possible by comparing the two variables directly.
 
@@ -155,7 +155,7 @@ Thus far we've described precursors to making decisions and preparing data for i
 
 Horizontal data integration is necessary when we have the same set of observations, but multiple variables *scattered* across two tables. By performing a horizontal data integration we make a table *wider* by adding new variables for each observation. If you have any experience with databases this is also referred to as a **join** (for more information about SQL joins see [this software carpentry lesson](https://swcarpentry.github.io/sql-novice-survey/07-join/index.html)). To horizontally integrate data we perform `left_joins` or `right_joins`.
 
-To accurately perform a horizontal data integration manually - that is copying and pasting between two datasets - it is necessary to make sure that each dataset has a shared variable. When we copy and paste one table into another, we can then simply align, or match, the two shared variables to complete the integration.
+To accurately perform a horizontal data integration manually - that is copying and pasting between two datasets - it is necessary to make sure that _each dataset has a shared variable_. When we copy and paste one table into another, we can then simply align, or match, the two shared variables to complete the integration.
 
 I am also going to show you how how to perform a horizontal data integration using `R`. You do not have to follow these steps unless you are interested. To follow along you should download and install the programming language [R](https://www.r-project.org/) and the integrated development environment (IDE) [RStudio](https://rstudio.com/products/rstudio/download/) (select the RStudio Desktop free installation). This example comes from friends running the [Lost Stats](https://lost-stats.github.io/) project.
 
@@ -181,15 +181,15 @@ DollarValue2018 <- data.frame(Currency = c("Euro", "Pound", "Yen", "Dollar"),
 
 You will now have two tables that look something like this:
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/GDP2018_Data.png" alt="GDP 2018 Table" width="300"/>  <img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/DollarValues2018_Data.png" alt="Exchange Rate 2018 Table" width="250"/>
+<img src="{site.baseurl}_images/GDP2018_Data.png" alt="GDP 2018 Table" width="300"/>  <img src="{{site.baseurl}}_images/DollarValues2018_Data.png" alt="Exchange Rate 2018 Table" width="250"/>
 
 In the initial steps above we have created two data tables and assigned these tables to the name `GDP2018` and `DollarValue2018`.
 
 To horizontally integrate these two tables we want to **join** or combine `GDP2018` and `DollarValue2018`.
 
-Use `help(join)` to see the types of joins that we can make in R (and specifically look for the join help in the library `dplyr`).
+Use `help(join)` (or the shorter `?join`) to see the types of joins that we can make in R (and specifically look for the join help in the library `dplyr`).
 
-To complete our horizontal data integration we simply do the following:
+To complete our horizontal data integration we do the following:
 
 ```
 GDPandExchange <- left_join(GDP2018, DollarValue2018)
@@ -199,16 +199,16 @@ View(GDPandExchange)
 ```
 The new table will look something like:
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/GDPandExchange_Data.png" alt="GDP 2018 Table" width="300"/>
+<img src="{{site.baseurl}}}_images/GDPandExchange_Data.png" alt="GDP 2018 Table" width="300"/>
 
 A helpful note appears thanks to `dplyr` that clarifies some of the magic that just happened:
 
-<img src="https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/JoiningByCurrency.png" alt="GDP 2018 Table" width="400"/>
+<img src="{{site.baseurl}}_images/JoiningByCurrency.png" alt="GDP 2018 Table" width="400"/>
 
 The `left_join` (or any `dplyr` join) function will automatically detect that the `Currency` variable is shared in both data tables because it has the same column name. In recognizing this shared variable `dplyr` will use this, automatically, as the place to perform the left join. And helpfully, when `dplyr` detects this similarity, it simply retains just one example of the `Currency` variables and its values. Voilà - a single tidy data table through horizontal data integration!
 
 ### Vertical data integration
-Vertical data integration, which is much more common in curation, is when we have two tables with the same variables, but different observations. To perform a vertical integration we simply add new observations to one of our existing datasets. This makes our integrated data table *longer* because it contains more observations.  
+Vertical data integration, which is much more common in curation, is when we have two tables with the same variables, but different observations. To perform a vertical integration we simply add new observations to one of our existing datasets. This makes our integrated data table *longer* because it contains more observations. Note that the requirements for vertical integration are more stringent than for horizontal integration: You need two tables with the exact same columns, ideally in the same order.
 
 In `R` we first will subset a native data table (one that is included as an example) and then recombine it to see how vertical integration works in practice.
 
@@ -260,7 +260,6 @@ Once these tasks were complete we looked at practical ways to combine two tables
 
 # Lecture
 
-<div id="som-player" class="som-embed-player" data-id="cYf3oHAIEB"><script src="https://screenpal.com/player/appearance/cYf3oHAIEB"></script><iframe width=853 height=482 style="border:0;" scrolling="no" src="https://screenpal.com/player/cYf3oHAIEB?width=100%&height=100%&ff=1&title=0&copyUrl=1" allowfullscreen="true"></iframe></div>
 
 
 # Readings
@@ -277,7 +276,7 @@ If you are interested in the history of this topic from the perspective of datab
 
 For a bit of historical background, Ch 1 of this book (pages 1-13) provides an excellent overview of how data were originally made compliant with web standards:
 
-- Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. [PDF](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/Data-on-the-Web-Skeleton.pdf)
+- Abiteboul, S., Buneman, P., & Suciu, D. (2000). Data on the Web: from relations to semistructured data and XML. Morgan Kaufmann. [PDF]({{site.baseurl}}content/readings/Data-on-the-Web-Skeleton.pdf)
 
 <h2><a id="Exercise">Exercise</a></h2>
 The exercise this week was inspired by an interesting analysis of New York City 311 data by [Chris Whong](https://twitter.com/chris_whong/status/1240363144654000132) ([archived tweet](https://web.archive.org/web/20210314224906/https://twitter.com/chris_whong/status/1240363144654000132)) who at the beginning of the Covid-19 pandemic did a lot of very interesting data analysis. What he observed back in 2019 was a 1000% increase in "Consumer Complaint" 311 requests after the first recorded case of Covid-19 infection in NYC. This was not without some important external conditions - after this recorded infection there was a more concerted effort by NYC residents to stockpile supplies. Having heard numerous informal complaints of price-gouging the city recommended that consumers report businesses using a 311 hotline.
@@ -286,11 +285,11 @@ A simple graph makes this more compelling than the narrative description - we se
 
 ![](https://pbs.twimg.com/media/ETapolDX0AAt9Ye?format=png&name=900x900)
 
-Inspired by this creative visualizing of 311 data and by the examples included in the content this week, you will be trying your hands at integrating 311 data from two different cities from a similar time period of March 1, 2020 through May 1, 2020. Lucky for us, there is an existing repository of [311 city data](https://andrew-friedman.github.io/jkan/datasets/). However, retrieving data from some of these repositories can be difficult depending on the size of the data download and the ability to filter before downloading. So I am providing you with datasets to use. (If you're really ambitious and have the time you are more than welcome to choose your own cities and download the data - but don't prioritize this over other work for this class and other classes.)
+Inspired by this creative visualizing of 311 data and by the examples included in the content this week, you will be trying your hands at integrating 311 data from two different cities from a similar time period of March 1, 2020 through May 1, 2020. Lucky for us, there is an existing repository of [311 city data](https://andrew-friedman.github.io/jkan/datasets/). However, retrieving data from some of these repositories can be difficult depending on the size of the data download and the ability to filter before downloading. So I am providing you with datasets to use. (If you're really ambitious and have the time you are more than welcome to choose your own cities and download the data - but don't prioritize this over other work for this and other classes.)
 
-I have provided you with a random sample of [200 rows of data from San Francisco](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/data/SF_311_Feb-Apr.csv) and [200 rows of data from Boston](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/data/Boston_311_Feb-Apr.csv). (Note: you should be able to right-click on the pages that load from the links and Save Page As to open the content locally.)
+I have provided you with a random sample of [200 rows of data from San Francisco]({{site.baseurl}}content/data/SF_311_Feb-Apr.csv) and [200 rows of data from Boston]({{site.baseurl}}content/data/Boston_311_Feb-Apr.csv). (Note: you should be able to right-click on these links and use "Save Link as" to save the content locally.)
 
-Your exercise this week is to attempt to integrate (at least some) of the provided data. You may use your favorite tool for working with tables. Examples include: Microsoft Excel, Google Sheets, OpenRefine, R, Python. This task will be challenging but hopefully rewarding.
+Your exercise this week is to attempt to integrate (at least some) of the provided data. You may use your favorite tool for working with tables. Examples include: Microsoft Excel, Google Sheets, OpenRefine, R, Python. That said, I very much encourage you to use one of the scripting languages (i.e. R or python) if you're at all familiar. Especially if you're relatively new to the language, LLMs can be very helpful and you should absolutely feel free to use them. This task will be challenging but hopefully rewarding. 
 
 **Here are some helpful pointers:**
 
@@ -301,6 +300,6 @@ Your exercise this week is to attempt to integrate (at least some) of the provid
 
 **What to turn in:**
 
-Post the following in the [discussion](https://canvas.uw.edu/courses/1641385/discussion_topics/8072058) for this week's exercise:
+Post the following in the [discussion]() for this week's exercise:
 - Provide a table with an example of your integration. You do not need to integrate all 400 rows. Just choose an example to showcase the work you did. You can provide your new table via a Google Sheet, Excel document, .csv, or even a screenshot of the new table from whatever software platform you are using. If you were unable to integrate the the tables, show an example of the two tables and where you got stuck. I'm not promising that this will be easy, but I also don't want you to spend hours on this. Take one hour to make your best attempt and then follow the next step.
 - Provide an explanation (~1 paragraph) of what you tried to integrate the data, and why this was or was not challenging. Was this an example of vertical or horizontal integration (or a combination)?
