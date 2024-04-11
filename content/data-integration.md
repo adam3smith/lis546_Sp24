@@ -55,7 +55,7 @@ If we look at the [purpose of 311](https://www.govtech.com/dc/articles/What-is-3
 
 The reality is much messier.
 
-![Data Dictionaries from Chicago and Austin 311 Data](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/dataintegration-model.png)
+![Data Dictionaries from Chicago and Austin 311 Data]({{https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/}}_images/dataintegration-model.png)
 
 Even though these two cities record the same information about the same concept using the same data infrastructure (each city publishes data using a Socrata-based data repository) there are appreciable differences and challenges in integrating these two datasets. The annotations above point out some of these slight but appreciable differences:
 
@@ -73,7 +73,7 @@ Additionally, there is a field called `Duplicate` with the [following values](ht
 ,{"duplicate":true}]
 ```
 
-The Austin dataset contains a similar variable `SR_Status` with a description of "Duplicate statuses indicate that issue had previously been reported recently." If we perform our [API magic](https://data.austintexas.gov/resource/xwdj-i9he.json?$select=distinct%20sr_status_desc) again, the values in the field are (April 2024 note: this call is currently broken -- you'll instead get the first 1,000 status entries):
+The Austin dataset contains a similar variable `SR_Status` with a description of "Duplicate statuses indicate that issue had previously been reported recently." If we perform our [API magic](https://data.austintexas.gov/resource/xwdj-i9he.json?$select=distinct%20sr_status_desc) again, the values in the field are (_April 2024 note: this call is currently broken -- you'll instead get the first 1,000 status entries_):
 ```
 [{"sr_status_desc":"CancelledTesting"}
 ,{"sr_status_desc":"Closed"}
