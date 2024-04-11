@@ -44,7 +44,7 @@ To overcome difficulties in combining different data tables we can engage with c
 
 The first activity in data integration is to informally or formally model the structure of a data table. In DC 1, we created data dictionaries which were focused on providing users of data a quick and precise overview of their contents. Data dictionaries are also a method for informally modeling the content of a dataset so that we, as curators, can make informed decisions about restructuring and cleaning.
 
-Here is an example of two data dictionaries for the same conceptual information: 311 service requests to the city of [Chicago, IL](https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy) and [Austin, TX](https://data.austintexas.gov/City-Government/311-Unified-Data-Test-Site-2019/i26j-ai4z) (note especially the section called "Columns in this Dataset"). Intuitively, we would expect that data from these two cities are similar enough in content that they can be meaningfully combined.
+Here is an example of two data dictionaries for the same conceptual information: 311 service requests to the city of [Chicago, IL](https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy) and [Austin, TX](https://data.austintexas.gov/Utilities-and-City-Services/Austin-311-Public-Data/xwdj-i9he/about_data) (note especially the section called "Columns in this Dataset"). Intuitively, we would expect that data from these two cities are similar enough in content that they can be meaningfully combined.
 
 If we look at the [purpose of 311](https://www.govtech.com/dc/articles/What-is-311.html) we should be able to imagine at least a few of the columns, before we even dive into an existing dataset. We can probably safely assume there will be:
 
@@ -73,7 +73,7 @@ Additionally, there is a field called `Duplicate` with the [following values](ht
 ,{"duplicate":true}]
 ```
 
-The Austin dataset contains a similar variable `SR_Status` with a description of "Duplicate statuses indicate that issue had previously been reported recently." If we pserform our [API magic](https://data.austintexas.gov/resource/i26j-ai4z.json?$select=distinct%20sr_status_desc) again, the values in the field are:
+The Austin dataset contains a similar variable `SR_Status` with a description of "Duplicate statuses indicate that issue had previously been reported recently." If we perform our [API magic](https://data.austintexas.gov/resource/xwdj-i9he.json?$select=distinct%20sr_status_desc) again, the values in the field are (April 2024 note: this call is currently broken -- you'll instead get the first 1,000 status entries):
 ```
 [{"sr_status_desc":"CancelledTesting"}
 ,{"sr_status_desc":"Closed"}
@@ -118,7 +118,7 @@ Regardless of our decision it is important to note that we are not just changing
 
 <img src="{{site.baseurl}}_images/3_tables_integrated.png" alt="Title is Polar Bears. There is one table, with two columns titled Location and BirthWeight_Ounces" width="300"/>
 
-### Standardize Variables
+### Standardizing Variable Structure
 Let's look at another example from two variables in the 311 data described above.
 
 <img src="{{site.baseurl}}_images/CreatedDate_2tables.png" alt="Two tables of Created Dates with different levels of granularity" width="500"/>
@@ -255,7 +255,8 @@ To overcome these challenges I proposed a set of `integration precursors` that i
 
 1. Modeling data content
 2. Determining Observation Depth
-3. Determining Variable Homogeneity (it's at this stage we start to formalize our integration goals)
+3. Standardizing Variable Structure
+4. Determining Variable Homogeneity (it's at this stage we start to formalize our integration goals)
 
 Once these tasks were complete we looked at practical ways to combine two tables, including horizontal and vertical integration. We also were introduced to the magic of `dplyr` in performing simple data integrations in `R`.
 
