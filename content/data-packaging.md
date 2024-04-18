@@ -3,7 +3,7 @@ layout: default
 ---
 # Data Packaging
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander**  
+**Editing & Updates: Bree Norlander, Sebastian Karcher**  
 
 As data grow in size, and the documentation, software, and dependencies of an operating system grow in complexity - it is becoming increasingly hard to access and transfer data without a conceptual "package" to do so.
 
@@ -28,7 +28,7 @@ Packaging, more generally, is something that most users of a computer do without
 ## The Zip Package
 Most of us have used a "zip file" as a simple way to reduce the *size* of files that we want to send over the internet. A zip *file* is a bit of a misnomer - a zip is not just *a file*, but a complex set of technologies that work together to create a package of data.
 
-A zip file implements what is called a "compression algorithm" - this algorithm first characterizes the bit sequences in a collection of files (recall the "physical layer" of data from [Module 2](https://norlab.github.io/LIS-546-SPR2021/content/tables-trees-triples.html)). The algorithm then removes any unnecessary or redundant bits across the collection of files. What is left, in the language of data engineering, is called a "[payload](https://en.wikipedia.org/wiki/Payload_(computing))" - that is, only the unique content that we want to transfer via the package.
+A zip file implements what is called a "compression algorithm" - this algorithm first characterizes the bit sequences in a collection of files (recall the "physical layer" of data from [Module 2]({{site.baseurl}}content/tables-trees-triples.html)). The algorithm then removes any unnecessary or redundant bits across the collection of files. What is left, in the language of data engineering, is called a "[payload](https://en.wikipedia.org/wiki/Payload_(computing))" - that is, only the unique content that we want to transfer via the package.
 
 A Zip tool, which implements the algorithm, will also create metadata that will describe each file, and the *manifest* or metadata about what content the "zip" package contains as a whole.
 
@@ -41,7 +41,7 @@ Our operating systems then reassemble the original files by re-injecting the mis
 
 An example of a zip file may help make this clear: If we want to compress a folder of PDF documents, then we don't need to actually transfer all of the bits for each PDF - we only need the unique content (the bits) that make up each individual PDF. Because, PDF is a standard and each PDF has the same "header" (bits of information that tell our computers how to interpret a PDF) we don't need to actually transfer any header information. By removing redundant information (the header) we significantly reduce the size of the files being transferred. When a zip file is re-opened, on another computer, the operating system scans the metadata about each file, and based on the standard (in this case a PDF) our operating system will re-inject the header information to make the PDF files readable.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/ZipFileOverview.png)
+![]({{site.baseurl}}_images/ZipFileOverview.png)
 
 A zip file then acts as a data package with a very specific purpose - to reduce the size of files, and then package them together in a self-describing, independent container.
 
@@ -52,7 +52,7 @@ In Data Curation 1 - we described ways to ensure that our data have "authenticit
 
 The check-sum is one of the most important features of a data package - it allows for a curator to create a simple string of numbers that characterize a digital object's bits - and then upon re-opening the digital object in a new computing environment - check that the number matches (hence the name, a check-sum - the sum that we "check" to make sure the digital objects are authentic). We can think of a check-sum as our failsafe for ensuring that digital objects, data, continue to be authentic when packaged and exchanged across different computers.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/checksum.png)
+![]({{site.baseurl}}_images/checksum.png)
 
 To quickly review, thus far we have said that a data package in curation consists of:
 
@@ -67,12 +67,12 @@ The metadata about the package itself, the manifest, often contains the followin
 
 Here is, conceptually, what a data package might contain:
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/datapackage.png)
+![Contents of a data package]({{site.baseurl}}_images/datapackage.png)
 
 In the following section I will offer some in-depth description of two packaging standards that are used often in data curation: BagIT and Research Objects.
 
 ## BagIT
-BagIT comes from a phrase used in the early days of data engineering "Bag it and tag it" - meaning that data were supposed to be formatted, and described with standard metadata tags. BagIT grew out of a need for conducting digital preservation when operating systems like Windows, Mac, and Linux were much less compatible than they are today. Early digital curators needed a general standard where data could be uniformly described, structured within a self-describing container, and transferred across different operating systems (and their different file directories) reliably. (For more history on BagIT see this LOC [blog post](https://blogs.loc.gov/thesignal/2019/04/bagit-at-the-library-of-congress/).)
+BagIT comes from a phrase used in the early days of data engineering "Bag it and tag it" - meaning that data were supposed to be formatted, and described with standard metadata tags. BagIT grew out of a need for conducting digital preservation when operating systems like Windows, Mac, and Linux were much less compatible than they are today. Early digital curators needed a general standard where data could be uniformly described, structured within a self-describing container, and transferred across different operating systems (and their different file directories) reliably. (For more history on BagIT see this [LOC blog post](https://blogs.loc.gov/thesignal/2019/04/bagit-at-the-library-of-congress/).)
 
 The BagIT standard outlines file naming conventions, so that each file in a package is easily interpretable; it provides a recommendation for how to create a manifest, so that all the files included in a package are accurately described; and, it provides a way to include checksums for each file that is contained in the "bag".
 
@@ -97,9 +97,9 @@ Let's look at each of these files to understand exactly what the package `My1stB
 - `data/`: This is the content of our bag - which is going to consist of a set of files
 - `file1` and `file2`: these are the actual contents of our bag, the data files that are being packaged and described.
 - `metadata/`: This is a directory within our data, that will contain metadata about each content file.
-- `file1-metadata` and `file2-metadata`: These are the metadata files that provide descriptive metadata about each data file.
+- `file1-metadata` and `file2-metadata`: These are the metadata files that provide descriptive metadata about each data file. (as noted in the lecture, this is designed differently in QDR's BagIt implementation)
 - `fetch.txt`: The BagIT standard, as I described above, was designed for digital preservation. The fetch.txt file allows an operating system to check if there are any missing contents (this is beyond the scope of the explanation for this chapter - but just keep in mind that this is a file that all bags usually contain, even if you never pay attention to it (I don't)).      
-- `manifest-md5.txt`: This is the check-sum that we create for the bag of files. In this bag, we have two data files, `file1.csv` and `file2.csv`. The `manifest-md5.txt` contains a checksum for both of these files as well as their metadata. When a new operating system attempts to open the bag, it will first open each data file, and then create a checksum for each file. A curator will then compare the new checksum and the checksum that is listed in the `manifest-md5.txt` file to make sure that these are the same. If they are the same (and they are 99.999% of the time) we can be sure that we've reliably transferred the data from one computing environment to another. The `md5` in the filename of the manifest is a shorthand way to specify which checksum algorithm was used, in this case the algorithm is `md5` - if you're not already terribly bored by this chapter, you can read more about [md5](https://en.wikipedia.org/wiki/MD5). I point this out only to explain that md5 is the most common algorithm used for creating check-sums in data curation.
+- `manifest-md5.txt`: This is the check-sum that we create for the bag of files. In this bag, we have two data files, `file1.csv` and `file2.csv`. The `manifest-md5.txt` contains a checksum for both of these files as well as their metadata. When a new operating system attempts to open the bag, it will first open each data file, and then create a checksum for each file. A curator will then compare the new checksum and the checksum that is listed in the `manifest-md5.txt` file to make sure that these are the same. If they are the same (and they are 99.999% of the time) we can be sure that we've reliably transferred the data from one computing environment to another. The `md5` in the filename of the manifest is a shorthand way to specify which checksum algorithm was used, in this case the algorithm is `md5` - if you're not already terribly bored by this chapter, you can read more about [md5](https://en.wikipedia.org/wiki/MD5). These days, `md5` has been mostly replaced by [SHA-2](https://en.wikipedia.org/wiki/SHA-2), specifically `sha256` and `sha512` (the number is number of bits -- the more bits, the longer the hash). The reason for this is that `md5` hashes are not cryptographically secure: you can [design two files to have the same md5](https://www.mathstat.dal.ca/~selinger/md5collision/): this is not super-relevant for data preservation, but... better safe than sorry.
 
 The `bag-info.txt` file which contains manifest metadata can often be confusing for first time bag creators. Here is a an example of the `bag-info.txt` contents from a bag created by the University of North Texas library. (This example was shared by Mark E Phillips, you can read his blog about bag-info files [here](https://vphill.com/journal/post/4142/).)
 
@@ -136,7 +136,7 @@ There are three main motivations for creating a data package that are worth expl
 
 BagIT is a standard that is broadly used by cultural heritage institutions, archives, and libraries in packaging all kinds of digital objects. But, a number of other packaging standards have built upon BagIT's core features to enhance and standardize things like file and manifest metadata. These standards are often in service of transferring a particular type of metadata, or a particular role that data play as evidence within a specific domain.
 
-![](https://imgs.xkcd.com/comics/standards.png)
+![XKCD comic about standard proliferation](https://imgs.xkcd.com/comics/standards.png)
 
 The last decade of innovation in data packaging has, as is typical, produced a confusing number of standards that we as curators might use. At their core, many of these new standards are, as I said above, simply modifying some small aspect of BagIT.
 
@@ -163,7 +163,7 @@ In a [formalized metadata record](http://dgarijo.github.io/ResearchObjects/Minin
 
 In this RO we see a number of different datasets and results files - along with a plain text readme.txt file which contains some additional information about his thesis.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/DanielDirectory.png)
+![]({{site.baseurl}}_images/DanielDirectory.png)
 
 As savvy data curators you probably recognize that this RO doesn't include any checksum information. That is, there is no way, even with the shared data and metadata descriptions following ROs recommendations, to verify that these data are what they purport to be, right?
 
@@ -175,32 +175,40 @@ In many ways, packaging is a curatorial intervention that not just makes data ea
 
 ## Lecture
 
-<iframe width=853 height=476 frameborder="0" scrolling="no" src="https://screencast-o-matic.com/embed?sc=cYhnb3BAeu&v=6&ff=1&title=0&controls=1" allowfullscreen="true"></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ov5A6HOycjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 ## Readings
 
-- Bechhofer, S., De Roure, D., Gamble, M., Goble, C., & Buchan, I. (2010). Research objects: Towards exchange and reuse of digital knowledge. [PDF](https://eprints.soton.ac.uk/268555/1/fwcs-ros-submitted-2010-02-15.pdf)
+- Bechhofer, S., De Roure, D., Gamble, M., Goble, C., & Buchan, I. (2010). [Research objects: Towards exchange and reuse of digital knowledge. PDF](https://eprints.soton.ac.uk/268555/1/fwcs-ros-submitted-2010-02-15.pdf)
 
-Approaches to Research Data Packaging:
+- Skim this list of projects and tools for data packaging: [Google Sheet](https://docs.google.com/spreadsheets/d/1Tg-oYGPdBDs5LORt0olD5t4X1R_YliUrwr6bNmImjTk/edit) or [PDF]({{site.baseurl}}content/readings/DataPackagingFormats.pdf).
 
-- Skim this list of projects and tools for data packaging: [Google Sheet](https://docs.google.com/spreadsheets/d/1Tg-oYGPdBDs5LORt0olD5t4X1R_YliUrwr6bNmImjTk/edit) or [PDF](https://github.com/norlab/LIS-546-SPR2021/raw/master/content/readings/DataPackagingFormats.pdf).
-
-- Neylon (2017) [Packaging data](http://cameronneylon.net/blog/packaging-data-the-core-problem-in-general-data-sharing/). (Note this is the motivation for what was created as the Data Crate (see below) standard).
+- Neylon (2017) [Packaging data](http://cameronneylon.net/blog/packaging-data-the-core-problem-in-general-data-sharing/). (Note this is the motivation for what was created as the Data and then Research Object Crate (see below) standard).
 
 Pick One of following to read or review in-depth:
 
 - [BagIT for packaging QDR Data (social science / qualitative data)](https://github.com/QualitativeDataRepository/dataverse/wiki/Data-and-Metadata-Packaging-for-Archiving). (And some [background reading on BagIT](https://tools.ietf.org/pdf/draft-kunze-bagit-14.pdf) if you are really interested.)
+- [Croissant: a metadata format for ML-ready dataset](https://research.google/blog/croissant-a-metadata-format-for-ml-ready-datasets/)
 - [Frictionless data (general and open data)](https://frictionlessdata.io/data-package)
-- [Data Crate (general research data)](http://ptsefton.com/2019/07/01/DataCrate-OR2019.htm)
-- [Data Package (Ecology)](https://releases.dataone.org/online/api-documentation-v2.0.1/design/DataPackage.html)
+- [Research Object Crate (RO-Crate) ](https://www.researchobject.org/ro-crate/)
 - [HTRC Data Capsules (Digital Humanities)](https://wiki.htrc.illinois.edu/display/COM/HTRC+Data+Capsule+Specifications+and+Usage+Guide)
 
 <h2><a id="Exercise">Exercise</a></h2>
-This week there is no assignment to turn in. Instead we are going to look at a tool `Data Curator` that allows us to describe, validate, and package data using a graphic user interface.
+This week there is no assignment to turn in. Instead you have the option to look at one of two tools:
+1.  `Data Curator`, which allows us to describe, validate, and package data using a graphic user interface.
+2. A visual editor for the Croissant format
 
+### DataCurator
+- You'll follow along with a demo created by Nic Weber
 - The tool is available for download [here](https://github.com/qcif/data-curator/releases/tag/v1.2.9)
-- The dataset that I used in this demonstration is found [here](https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Human-Resources/7zkx-3pp7)
+- The dataset that he used in this demonstration is found [here](https://data.cityofchicago.org/FOIA/FOIA-Request-Log-Human-Resources/7zkx-3pp7)
 - After you download DataCurator and the dataset follow along with the following demo video below.
 - Give the tool a spin.
 
 <iframe width=853 height=506 frameborder="0" scrolling="no" src="https://screencast-o-matic.com/embed?sc=cYftImAspN&v=5&controls=1&ff=1" allowfullscreen="true"></iframe>
+
+### Croissant Visual Editor
+- The [Croissant Editor is available online](https://huggingface.co/spaces/MLCommons/croissant-editor) (you'll need to create a free HuggingFace account)
+- Look at several of the existing datasets and how they're described in the visual editor
+- Modify some fields/variable
+- Export the JSON-LD and try to follow it's basic structure and logic
+_Note: I have not gotten the online version of the visual editor to work for new data: it doesn't re-run validation when you make changes_
