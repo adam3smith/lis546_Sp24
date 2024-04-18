@@ -195,7 +195,7 @@ Pick One of following to read or review in-depth:
 <h2><a id="Exercise">Exercise</a></h2>
 This week there is no assignment to turn in. Instead you have the option to look at one of two tools:
 1.  `Data Curator`, which allows us to describe, validate, and package data using a graphic user interface.
-2. A visual editor for the Croissant format
+2. A visual editor for the `Croissant`` format
 
 ### DataCurator
 - You'll follow along with a demo created by Nic Weber
