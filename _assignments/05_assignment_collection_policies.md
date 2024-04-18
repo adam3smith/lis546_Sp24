@@ -28,7 +28,6 @@ Here are some valuable examples:
 - University of Minnesota: [Data Collection Policy](https://conservancy.umn.edu/pages/drum/policies/#data-collection-policy)
 - Cornell: [Content collection policy](http://guides.library.cornell.edu/ecommons/contentpolicy) and also see their valuable [Recommended file formats](http://guides.library.cornell.edu/ecommons/formats)
 - QDR: has both a [collection development policy](https://qdr.syr.edu/policies/collectionsdevelopment) and instructions for users on [preparing a data deposit](https://qdr.syr.edu/guidance/managing/preparing-data).
-- IDEALS: a repository at the University of Illinois has an excellent policy on the preservation grantees they can make for [particular file formats](https://wiki.illinois.edu/wiki/display/IDEALS/Digital+Preservation+Support+Policy#DigitalPreservationSupportPolicy-Category1)
 - SF Open Data: [Submission Guidelines](https://datasf.org/publishing/submission-guidelines/)
 - A more general approach is to define the scope of an open data program, see the Seattle Open Data [description](http://www.seattle.gov/tech/initiatives/open-data/about-the-open-data-program) for a helpful example.
 
@@ -41,4 +40,4 @@ Establish the policies that will govern your data collection policy. This should
 - How big can a collection be (in size)?
 - What kind of preservation guarantees will you make for each format?
 
-You should feel free to LIBERALLY borrow from existing repository policies or protocols that we have looked at this quarter. You should also feel empowered to look at other protocols, or other repositories and decide how to answer some of these questions.
+You should feel free to _liberally_ borrow from existing repository policies or protocols that we have looked at this quarter. You should also feel empowered to look at other protocols, or other repositories and decide how to answer some of these questions.
