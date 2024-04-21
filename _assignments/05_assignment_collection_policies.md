@@ -32,7 +32,7 @@ Here are some valuable examples:
 - A more general approach is to define the scope of an open data program, see the Seattle Open Data [description](http://www.seattle.gov/tech/initiatives/open-data/about-the-open-data-program) for a helpful example.
 
 **Protocol Deliverable**      
-Establish the policies that will govern your data collection policy. This should include (at minimum):
+Establish the policies that will govern your data collection policy and post a link to your policy to the [Canvas forum](https://canvas.uw.edu/courses/1724350/discussion_topics/8909329). This should include (at minimum):
 
 - What are the criteria that make a dataset, or collection, relevant to your protocol? What, if anything, might exclude a relevant dataset?
 - What will you require to be included for a minimum viable package of data? (e.g. the data must have a clear license, a format that is (or can be converted to) an open standard, and enough contextual documentation that structured metadata can be created).
