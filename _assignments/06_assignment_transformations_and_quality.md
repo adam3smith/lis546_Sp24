@@ -7,7 +7,7 @@ attachment:
 solutions:
 due_event:
     type: due
-    date: 2024-05-03T23:59:00Z
+    date: 2024-05-10T23:59:00Z
     description: 'Submit Transformations and Quality Assignment'
     url: /assignments/06_assignment_transformation_and_quality
 ---

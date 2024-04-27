@@ -176,6 +176,7 @@ In many ways, packaging is a curatorial intervention that not just makes data ea
 ## Lecture
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ov5A6HOycjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
 ## Readings
 
 - Bechhofer, S., De Roure, D., Gamble, M., Goble, C., & Buchan, I. (2010). [Research objects: Towards exchange and reuse of digital knowledge. PDF](https://eprints.soton.ac.uk/268555/1/fwcs-ros-submitted-2010-02-15.pdf)
