@@ -5,11 +5,11 @@ title: "Week 6: Ethics and Politics of Data Curation"
 tldr: "Data Curation is never neutral. What could ethical and politically aware curation look like?"
 thumbnail: /static_files/presentations/arch.png
 links:
-    - url: To come
+    - url: https://youtu.be/JmLFx9CigfY?si=2UZVyhboV4NwnIMo
       name: video
-    - url: /content/curation-ethics.html
+    - url: content/curation-ethics.html
       name: content
-    - url: /content/curation-ethics.html#Exercise
+    - url: content/curation-ethics.html#Exercise
       name: exercise
 
 ---

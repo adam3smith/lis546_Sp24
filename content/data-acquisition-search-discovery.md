@@ -3,9 +3,9 @@ layout: default
 ---
 # Data Acquisition, Search, and Discovery
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander**
+**Editing & Updates: Bree Norlander, Sebastian Karcher**
 
-The last week in our four 'Grand Challenges in Data Curation' focuses on the process of searching for, discovering, and accessing data that is made publicly available on the web. This is a complicated problem because of the simple fact that "data on the web" have unique properties that are similar to, but fundamentally different than "documents" that are structured for indexing and retrieval within information systems. In the following module I review the fundamental challenges that data curators face in making data discoverable.
+The last week in our 'Grand Challenges in Data Curation' focuses on the process of searching for, discovering, and accessing data that is made publicly available on the web. This is a complicated problem because of the simple fact that "data on the web" have unique properties that are similar to, but fundamentally different than "documents" that are structured for indexing and retrieval within information systems. In the following module I review the fundamental challenges that data curators face in making data discoverable.
 
 ## Introduction
 Data are increasingly published to the web with open licenses that enable their reuse across sectors. While there is increasingly more open data available, there has been relatively little innovation with what are typically metadata-driven search engines that facilitate open data discovery.
@@ -107,7 +107,7 @@ So yet again, at face value this is a known item search - a news outlet reports 
 
 When I view the [landing page of this dataset](https://bellevue.data.socrata.com/Responsive-Government/MyBellevue-311-data/ueem-kcku) the metadata tells me that, indeed, this resource was last updated on May 10th.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/bellevue.png)
+![]({{site.baseurl}}_images/bellevue.png)
 
 However, when I look at the actual data - I discover that the last date when information about 311 complaints has been updated was February 29th, 2020.
 
@@ -264,49 +264,45 @@ Discoverability is dependent upon reliable integration, packaging, and tidy meta
 
 This week I am going to ask you to read three things, but offer a number of other readings in this area if you are interested:
 
-Read this piece that was recently published on the development of a search infrastructure at Google:
+Read this piece that was recently published on the current status of a dataset search infrastructure at Google:
 
-- Brickley, D., Burgess, M., & Noy, N. (2019, May). Google Dataset Search: Building a search engine for datasets in an open Web ecosystem. In The World Wide Web Conference (pp. 1365-1375). [PDF on Canvas](https://canvas.uw.edu/files/76572318/download?download_frd=1)
+-[Discovering Datasets on the Web Scale: Challenges and Recommendations for Google Dataset Search](https://doi.org/10.1162/99608f92.4c3e11ca) 
 
-Then read these two short blog posts about when the initative started, and where it finished:
+Then read this older piece describing Google's effort some years ago and the piece by Datacite on finding datasets and semantically related items using their infrastructure
+- [Google Dataset Search: Building a search engine for datasets in an open Web ecosystem.](https://research.google/pubs/google-dataset-search-building-a-search-engine-for-datasets-in-an-open-web-ecosystem/)
+- [DataCite Commons - Exploiting the Power of PIDs and the PID Graph](https://doi.org/10.53731/kx45q-14h82)
 
-- Noy, N et al (2017) "Facilitating the discovery of public datasets" [Link](https://ai.googleblog.com/2017/01/facilitating-discovery-of-public.html)
-- Noy, N (2020) "Discovering millions of datasets on the web" [Link](https://www.blog.google/products/search/discovering-millions-datasets-web/)
 
 Additional valuable readings on data discovery:
 
-- Wu, M., Psomopoulos, F., Khalsa, S. J., & de Waard, A. (2019). Data Discovery Paradigms: User Requirements and Recommendations for Data Repositories. Data Science Journal, 18(1). [Link](https://datascience.codata.org/articles/10.5334/dsj-2019-003/)
-- Gregory, K. M., Cousijn, H., Groth, P., Scharnhorst, A., & Wyatt, S. (2019). Understanding data search as a socio-technical practice. Journal of Information Science, [PDF](https://journals.sagepub.com/doi/pdf/10.1177/0165551519837182)
-- Vissers, J., Van den Bosch, F., Bogaerts, A., Cocquyt, C., Degreef, J., Diagre, D., ... & Fabri, R. (2017). Scientific user requirements for a herbarium data portal. PhytoKeys, (78), 37 [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543274/)
-- Fenlon, K., Senseney, M., Green, H., Bhattacharyya, S., Willis, C., & Downie, J. S. (2014). Scholar‐built collections: A study of user requirements for (Humanities) research in large‐scale digital libraries. Proceedings of the American Society for Information Science and Technology, 51(1), 1-10. [PDF](https://onlinelibrary.wiley.com/doi/pdf/10.1002/meet.2014.14505101047)
-- Macgregor, George. "Improving the discoverability and web impact of open repositories: techniques and evaluation." Code4Lib Journal 43 (2019).  [PDF](https://strathprints.strath.ac.uk/66997/1/Macgregor_C4L_2019_Improving_the_discoverability_and_web_impact_of_open_repositories_techniques_and_evaluation.pdf)
+- [Data Discovery Paradigms: User Requirements and Recommendations for Data Repositories.](https://datascience.codata.org/articles/10.5334/dsj-2019-003/)
+- [Understanding data search as a socio-technical practice.](https://journals.sagepub.com/doi/pdf/10.1177/0165551519837182)
+- [Scientific user requirements for a herbarium data portal.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543274/)
+- [Scholar‐built collections: A study of user requirements for (Humanities) research in large‐scale digital libraries.](https://onlinelibrary.wiley.com/doi/pdf/10.1002/meet.2014.14505101047)
+- [Improving the discoverability and web impact of open repositories: techniques and evaluation.](https://strathprints.strath.ac.uk/66997/1/Macgregor_C4L_2019_Improving_the_discoverability_and_web_impact_of_open_repositories_techniques_and_evaluation.pdf)
 
-Case Study (optional):
+**Case Study (Optional):**
+- [Exploratory and directed search strategies at a social science data archive](https://iassistquarterly.com/index.php/iassist/article/view/1087)
 
-- Pienta, A., Akmon, D., Noble, J., Hoelter, L., & Jekielek, S. (2017). A Data-Driven Approach to Appraisal and Selection at a Domain Data Repository. International journal of digital curation, 12(2), 362. [Link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128405/)
 
 ## Lecture
 
-A note about the lecture: since the recording of this lecture, we have changed the order of the modules and you will be learning about [Tidy Metadata](https://norlab.github.io/LIS-546-SPR2021/content/metadata-application-profiles.html) **next** week.
-<div>
-<iframe width=853 height=508 frameborder="0" scrolling="no" src="https://screencast-o-matic.com/embed?sc=cYh2Dik1zz&v=5&controls=1&ff=1" allowfullscreen="true"></iframe>
-</div>
-<h2><a id="Exercise">Exercise</a></h2>
+
 Our exercise this week focuses on exploring the concept of an API.
 
-## Exercise Tutorial
+## Exercise
 
 ### How to use an API (And what is it anyway?)
-API is the acronym for Application Programming Interface. An API does the work of retrieving data in a variety of forms from its original home to a source that is requesting that data using a specific set of formal methods or rules. The source may be you making a request through the web or it may be a mobile app retrieving map data from Google. A search for What is an API will result in many great tutorials. I found a quick 3-minute video that covers this topic well and will prepare you for the remainder of the tutorial. Note, this video is put out by a company but I do not mean it as an endorsement for the company, I just like their concise description. Let’s take a look...
+API is the acronym for Application Programming Interface. An API does the work of retrieving data in a variety of forms from its original home to a source that is requesting that data using a specific set of formal methods or rules. The source may be you making a request through the web or it may be a mobile app retrieving map data from Google. A search for "What is an API" will result in many great tutorials. I found a quick 3-minute video that covers this topic well and will prepare you for the remainder of the tutorial. Note, this video is put out by a company but I do not mean it as an endorsement for the company, I just like their concise description. Let’s take a look...
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s7wmiS2mSXY?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 So why should a data curator be interested in APIs? An API is a common tool for retrieving data.
 
-**Why APIs Matter**
+### Why APIs Matter
 
-APIs provide the messenger service you need to collect data from sites like [Twitter](https://developer.twitter.com/en/docs/api-reference-index), [MySportsFeeds](https://www.mysportsfeeds.com/data-feeds/), [RottenTomatoes](https://developer.fandango.com/rotten_tomatoes), [Twitch](https://dev.twitch.tv/docs/api/), and more. Most of these sites will require you to apply for an API key and may have restrictions on the use of their data. For example, RottenTomatoes, states “Please note that at this time we no longer support unauthorized use of our data (e.g. unofficial projects, non-user facing data integrations).”
+APIs provide the messenger service you need to collect data from sites like [TikTok](https://developers.tiktok.com/products/research-api/), [MySportsFeeds](https://www.mysportsfeeds.com/data-feeds/), the [US Census Bureau](https://www.census.gov/data/developers/guidance/api-user-guide.html), [Twitch](https://dev.twitch.tv/docs/api/), and more. Most of these sites will require you to apply for an API key and may have restrictions on the use of their data. In some cases, API's cost money. The best example is Twitter, which used to have a generous API (tons of researchers used it and it was frequently used for classes, too), but now charges prohibitive fees for usage. 
 
 If you are interested in working with data, whether it be as a Data Curator, a Government Docs Librarian, or a Data Scientist, it will benefit you to be familiar with APIs. The following are use cases for which you may find yourself using an API:
 
@@ -315,17 +311,17 @@ If you are interested in working with data, whether it be as a Data Curator, a G
 + Searching for specific data within a dataset (e.g. does this dataset contain data from my zip code or what are the unique values within a specific column)
 + Performing simple calculations or summaries on a dataset directly within your browser (no need to download the data and use another software platform)
 
-As is the case with repositories, data portals, and an email from your boss, data retrieved from an API may be presented in a variety of different formats. When you use a "web service" API you will mainly see outputs in the form of eXtensible Markup Language known as XML, JavaScript Object Notation known as JSON (or geoJSON for geographic data), or Comma Separated Values known as CSV.
+As is the case with repositories, data portals, and an email from your boss, data retrieved from an API may be presented in a variety of different formats. When you use a "web service" API you will mainly see outputs in the form of eXtensible Markup Language known as XML, JavaScript Object Notation known as JSON (or geoJSON for geographic data), or (much less commonly these days) Comma Separated Values known as CSV.
 
 A **web service** is a "[system or software that uses an address, i.e., URL on the World Wide Web, to provide access to its services](https://rapidapi.com/blog/types-of-apis/#web-service-apis)". This means that the API output can be viewed directly in a web browser. The three most common types of web service APIs are:
 
 + Simple object access protocol or SOAP which returns an XML object
 + Remote procedural call R.P.C. which returns either an XML or JSON object depending on which format they're using (XML-RPC or JSON-RPC)
-+ and the most common right now is REpresentational State Transfer or REST which is not a protocol but rather a set of architectural principles (you can [read](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) the dissertation that coined the phrase)
++ and the most common right now is REpresentational State Transfer or REST which is not a protocol but rather a set of architectural principles (you can [read the dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)  that coined the phrase)
 
 REST services tend to offer an easy to parse URL structure consisting primarily of nouns that reflect the logical hierarchical categories of the data on offer. I will show you an example of what that means below. REST APIs usually return JSON or XML but can sometimes also return different formats such as CSV.
 
-![Web Service APIs](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/WebServiceAPIs.png)
+![Web Service APIs]({{site.baseurl}}/_images/WebServiceAPIs.png)
 
 ### Simple REST Example
 
@@ -333,13 +329,13 @@ Let’s take a look at a simple REST API example. This API is from Paul Hallet a
 
 The [SWAPI documentation](https://swapi.dev/documentation#people) tells us that queries within the People Resource will result in the following "Attributes":
 
-![SWAPI People Attributes: name, birth_year, eye_color, gender, hair_color, height, mass, skin_color, homeworld, films, species, starships, vehicles, url, created, edited, and you can search in the name field](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/SWAPI_People.png)
+![SWAPI People Attributes: name, birth_year, eye_color, gender, hair_color, height, mass, skin_color, homeworld, films, species, starships, vehicles, url, created, edited, and you can search in the name field]({{site.baseurl}}_images/SWAPI_People.png)
 
 It also notes that searches will only happen with the Name attribute field.
 
 The highest level search we can do within the People Resource is also the URL with which we will begin our queries: [`https://swapi.dev/api/people/`](https://swapi.dev/api/people/). You can go directly to that URL in your browser to see the first 10 data entries in the People Resource. This API requires you to paginate through the entries in intervals of 10. Fortunately, it tells you exactly how many entries there are and what the API query will be for the next page:
 
-![SWAPI People API Call: count reveals total People, next reveals URL for next 10 People](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/SWAPI_People_API_Call.png)
+![SWAPI People API Call: count reveals total People, next reveals URL for next 10 People]({{site.baseurl}}_images/SWAPI_People_API_Call.png)
 
 The pagination system is not ideal and makes it more tedious to grab all the data in the People dataset. It's not common to see it set up this way for such a small dataset, but you can imagine with a very large dataset this might be necessary to reduce the call time. Let's try a query for Name in the People Resource. We need to follow the REST rules for querying.
 
@@ -349,7 +345,7 @@ According to the documentation, in order to search within a Resource, we need to
 ```
 to the base URL. (Note that you will not need the brackets when you add your search term.)
 
-![SWAPI Search Documentation](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/SWAPI_Search_Doc.png)
+![SWAPI Search Documentation]({{site.baseurl}}_images/SWAPI_Search_Doc.png)
 
 So try out a search in the People Resource for "Luke". Your URL should look like: [`https://swapi.dev/api/people/?search=Luke`](https://swapi.dev/api/people/?search=Luke). You can further refine your search by adding an ampersand (&) and a second query. For example, you can designate a data format (which the documentation calls "encoding"). ~~With this simple API example, your choices are very limited: JSON (which is the default) or wookie. Sadly at the time of this writing, wookie is throwing an "unexpected character error" so just go ahead and try adding JSON format to the last query: [`https://swapi.dev/api/people/?search=Luke&format=JSON`](https://swapi.dev/api/people/?search=Luke&format=JSON). (Note you do not need to repeat the question mark for the second query.)~~ (As of the updating of this tutorial - these choices were non-functional.)
 
@@ -363,16 +359,16 @@ I discovered this interesting [API](https://poetrydb.org/index.html) that retrie
 
 Let's start with the first example on the page. [`http://poetrydb.org/title/Ozymandias/lines.json`](http://poetrydb.org/title/Ozymandias/lines.json) This URL is structured to return the lines of a given poem based on its title. However, I want more than just the lines of data. So with further reading in the README documentation I found that I could just remove the “lines” text from the URL to retrieve more data about the poem. [`http://poetrydb.org/title/Ozymandias/.json`](http://poetrydb.org/title/Ozymandias/.json) If you copy/paste this URL into a Firefox browser window, you'll see that Firefox automatically provides a simple layout for navigating the JSON and even an option for saving, copying, and filtering the data. This won’t be the case with all browsers and sometimes you will simply get the raw output as you can see here:
 
-![Output of URL as seen in Safari browser](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/Poetry_JSON_Safari.png)
+![Output of URL as seen in Safari browser]({{site.baseurl}}_images/Poetry_JSON_Safari.png)
 
 If this output were considerably longer and contained more nested arrays, it would be easy to get lost in the data. So let's use a helpful tool called [JSON Formatter](https://jsonformatter.org/), one of many JSON parsers. Click on the Upload Data button in the center of the screen and paste in a URL. Let's try data about poems by author Bronte using this URL (and note that for some reason in order for this to work here we have to add the 's' to http): `https://poetrydb.org/author/Bronte`.
 
-![Pop-up Window to paste URL](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/JSONFormatter_Load.png)
+![Pop-up Window to paste URL]({{site.baseurl}}_images/JSONFormatter_Load.png)
 
 The JSON Formatter allows you to sort data, filter, format, convert, and download data in alternate formats. If you want to use the data within Google Sheets for example, you can convert to csv, download the data, and open in Google Sheets.
 
 ### Programmatic Access to APIs
-While the above techniques work well for small datasets, if you want to access large datasets and/or want to wrangle and analyze the data, you can access APIs programmatically. You can access data through Python, R, Javascript, a command line terminal, and more. There are even proprietary software platforms for interacting with APIs. The video below shows a very quick example of accessing Tweets via the Twitter API using a Python script:
+While the above techniques work well for small datasets, if you want to access large datasets and/or want to wrangle and analyze the data, you can access APIs programmatically. You can access data through Python, R, Javascript, a command line terminal, and more. There are even proprietary software platforms for interacting with APIs. The video below shows a very quick example of accessing Tweets via the Twitter API (in the good ol' days of free access: see above) using a Python script:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RY7q3MpRN3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -392,12 +388,12 @@ Your exercise this week is to query an API about Pet Licenses in the City of Sea
 
 [`https://data.seattle.gov/Community/Seattle-Pet-Licenses/jguv-t9rb`](https://data.seattle.gov/Community/Seattle-Pet-Licenses/jguv-t9rb)
 
-If you click on the API button in the upper right-hand corner of the dataset, you will find a link to to the full dataset in JSON format. You could copy and paste that url into a browser and you would see the maximum allowed (I think it's 1000) number of records in the dataset. But for this exercise, you will find a smaller, more specific set of records. Click on the API Docs link.
+If you click on the API button in "Actions" menu in the upper right-hand corner of the dataset, you will find a link to to the full dataset in JSON format. You could copy and paste that url into a browser and you would see the maximum allowed (I think it's 1000) number of records in the dataset. But for this exercise, you will find a smaller, more specific set of records. Click on the "API Documentation" link at the bottom of the pop-up window.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/SeattlePetAPI.png)
+![]({{site.baseurl}}_images/SeattlePetAPI.png)
 
 This brings you to some very important documentation telling you how to query the dataset. Note, you **do not** need to apply for a token for this exercise. Read through to (or scroll down to) the `Fields` section of the documentation and expand the section on Animal's Name.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/AnimalsNameQuery.png)
+![]({{site.baseurl}}_images/AnimalsNameQuery.png)
 
 The documentation gives you the exact query URL for searching the dataset for a particular pet name. I want you to query the dataset for a pet name that is **not** *Zen*. Post to the [discussion board](https://canvas.uw.edu/courses/1641385/discussion_topics/8016065) the name of the pet you chose to query on and what you found for results. Feel free to test things like different cases, names with spaces, etc. If this was really easy for you, try retrieving a csv instead of JSON, or try a SoQL query found at this [link](https://dev.socrata.com/docs/functions/#2.1,) in the documentation.
