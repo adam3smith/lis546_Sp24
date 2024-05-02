@@ -102,6 +102,7 @@ Let's explore one more example of a failed search for relevant data.
 
 ### Attempt 3: Bellevue, WA
 **2024 Note: The city of Bellevue has since moved to a different open data platform (https://data.bellevuewa.gov/) and this example no longer works. I think both the example and the disappearance of the resource are instructive, so I'm leaving this up, but all links to data are broken**
+
 The City of Bellevue, WA in King County has developed a [specific application](https://bellevuewa.gov/city-news/report-stay-home-violations) for residents to report violations of the Washington State's "Stay home, Stay healthy" (social distancing) guidelines. As of April 22nd, 2020 the [Bellevue police department claimed](https://web.archive.org/web/20200526224243/https://mynorthwest.com/1829768/social-distancing-violations-bellevue-app/) to have received 567 reports of violations related to social distancing. I have previously worked with cities throughout King County on making 311 request data publicly available, and I know that Bellevue, WA regularly publishes 311 data to their city portal.
 
 So yet again, at face value this is a known item search - a news outlet reports on a Police Department's activities and there exists a corresponding public dataset where this information should be discoverable. When I search [Bellevue's data portal](https://bellevue.data.socrata.com) I find a number of "311" related data sets, and one that claims to be "updated daily" with a most recent update on May 10, 2020.
@@ -370,9 +371,9 @@ If this output were considerably longer and contained more nested arrays, it wou
 The JSON Formatter allows you to sort data, filter, format, convert, and download data in alternate formats. If you want to use the data within Google Sheets for example, you can convert to csv, download the data, and open in Google Sheets.
 
 ### Programmatic Access to APIs
-While the above techniques work well for small datasets, if you want to access large datasets and/or want to wrangle and analyze the data, you can access APIs programmatically. You can access data through Python, R, Javascript, a command line terminal, and more. There are even proprietary software platforms for interacting with APIs. The video below shows a very quick example of accessing Tweets via the Twitter API (in the good ol' days of free access: see above) using a Python script:
+While the above techniques work well for small datasets, if you want to access large datasets and/or want to wrangle and analyze the data, you can access APIs programmatically. You can access data through Python, R, Javascript, a command line terminal, and more. There are even proprietary software platforms for interacting with APIs. The video below shows a very quick example of accessing Tweets via the Twitter API using a Python script:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RY7q3MpRN3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=fHHDM2-If9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 My goal in this tutorial was to introduce you to APIs and how you can start using them today. While some APIs will require a coding background, many do not. I hope you will feel comfortable testing out different APIs and gathering data from sources of interest. As you experiement with gathering data via an API, be sure to look at the documentation for that API. Most documentation will give you all the information you need to format the query just the way you want it.
 
