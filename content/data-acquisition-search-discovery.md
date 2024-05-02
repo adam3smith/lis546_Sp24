@@ -88,7 +88,7 @@ Again, the news reports about social distancing violations in Detroit makes no r
 
 I attempted to find this dataset by first navigating to "data.detroitmi.gov" and then browsing for police data. If I search for "infractions" or "crimes" I get back 7 results. Narrowing this down by the description of each dataset, I find that "RMS Crime Incidents" should have all cited infractions issued by the Detroit Police Department. But again, the descriptive metadata for this search requires me to do a lot of browsing, evaluating, and guessing about what data is actually relevant to my query.  
 
-Here is the [dataset](https://data.detroitmi.gov/datasets/rms-crime-incidents?geometry=-83.628%2C42.264%2C-82.570%2C42.442) for all Detroit Police Department cited infractions from 2017- to present day. If I had just executed a generic google search for ["Detroit Crime Data"](https://www.google.com/search?q=Detroit+Crime+Data) this would have been my second result (note your search results may vary, when Bree looked this up on 4/20/21 it was the first result). Not bad!
+Here is the [dataset](https://data.detroitmi.gov/datasets/rms-crime-incidents?geometry=-83.628%2C42.264%2C-82.570%2C42.442) for all Detroit Police Department cited infractions from 2017- to present day. If I had just executed a generic google search for ["Detroit Crime Data"](https://www.google.com/search?q=Detroit+Crime+Data) this would have been my first result. Not bad!
 
 Let's try to explore the dataset though, because even though I have the data that I THINK I need, its not yet clear (as a generic end-user) if this is data is actually what I need to substantiate the news report that I read.
 
@@ -101,6 +101,7 @@ Again, I have a known-item search that cannot be accurately executed. The data t
 Let's explore one more example of a failed search for relevant data.
 
 ### Attempt 3: Bellevue, WA
+**2024 Note: The city of Bellevue has since moved to a different open data platform (https://data.bellevuewa.gov/) and this example no longer works. I think both the example and the disappearance of the resource are instructive, so I'm leaving this up, but all links to data are broken**
 The City of Bellevue, WA in King County has developed a [specific application](https://bellevuewa.gov/city-news/report-stay-home-violations) for residents to report violations of the Washington State's "Stay home, Stay healthy" (social distancing) guidelines. As of April 22nd, 2020 the [Bellevue police department claimed](https://web.archive.org/web/20200526224243/https://mynorthwest.com/1829768/social-distancing-violations-bellevue-app/) to have received 567 reports of violations related to social distancing. I have previously worked with cities throughout King County on making 311 request data publicly available, and I know that Bellevue, WA regularly publishes 311 data to their city portal.
 
 So yet again, at face value this is a known item search - a news outlet reports on a Police Department's activities and there exists a corresponding public dataset where this information should be discoverable. When I search [Bellevue's data portal](https://bellevue.data.socrata.com) I find a number of "311" related data sets, and one that claims to be "updated daily" with a most recent update on May 10, 2020.
@@ -325,29 +326,30 @@ REST services tend to offer an easy to parse URL structure consisting primarily 
 
 ### Simple REST Example
 
-Let’s take a look at a simple REST API example. This API is from Paul Hallet and is called [SWAPI](https://swapi.dev): The Star Wars API. Paul [writes](https://swapi.dev/about), "After hours of watching films and trawling through content online, we present to you all the People, Films, Species, Starships, Vehicles and Planets from Star Wars." SWAPI is built just to be an API, while other web applications may use the data, this API wasn't built with any particular application in mind. I did some searching of the website backend (hosted on [Github](https://github.com/phalt/swapi/)) and found that the data are available in six JSON files: films.json, people.json, planets.json, species.json, starships.json, and vehicles.json. You'll note that these files match with Paul's list of datasets in the quote above. In [REST naming conventions](https://restfulapi.net/resource-naming/), these datasets are referred to as "Resources" and as we see here, should be a noun indicating what is within the Resource. The SWAPI API, because it's built using a REST architecture, allows us to view the output from our API query directly in the browser. Let’s check out the People data.
+Let’s take a look at a simple REST API example. We are going to use the API for one of the cooles open bibliographic datasets available: [OpenAlex](https://openalex.org/).
+OpenAlex is "a fully open catalog of the global research system. It's named after the ancient Library of Alexandria and made by the nonprofit OurResearch." It allows you to search for literature, people, institutions, check citations and citations counts and more. For our purpose, we'll keep things pretty simple, though.
 
-The [SWAPI documentation](https://swapi.dev/documentation#people) tells us that queries within the People Resource will result in the following "Attributes":
+The [OpenAlex documentation](https://docs.openalex.org/) describes the various top-level entities you can query: Works, Authors, Sources, Instituteions, Topics, and Publishers, Funders, Concepts, and Geo[graphic information]. 
 
-![SWAPI People Attributes: name, birth_year, eye_color, gender, hair_color, height, mass, skin_color, homeworld, films, species, starships, vehicles, url, created, edited, and you can search in the name field]({{site.baseurl}}_images/SWAPI_People.png)
 
-It also notes that searches will only happen with the Name attribute field.
+![OpenAlex Entities: Works, Authors, Sources, Instituteions, Topics, and Publishers, Funders, Concepts, and Geo[graphic information]]({{site.baseurl}}_images/OpenAlex-entities.png)
 
-The highest level search we can do within the People Resource is also the URL with which we will begin our queries: [`https://swapi.dev/api/people/`](https://swapi.dev/api/people/). You can go directly to that URL in your browser to see the first 10 data entries in the People Resource. This API requires you to paginate through the entries in intervals of 10. Fortunately, it tells you exactly how many entries there are and what the API query will be for the next page:
+Let's start by searching the literature. We navigate to the documentation for [searching works](https://docs.openalex.org/api-entities/works/search-works) and find a useful example for searching in the title of a work. Let's say we're interested in seeing how far the concept of a "Stochastic Parrot" has travelled. So our search would be `https://api.openalex.org/works?filter=title.search:stochastic%20parrot`.  
 
-![SWAPI People API Call: count reveals total People, next reveals URL for next 10 People]({{site.baseurl}}_images/SWAPI_People_API_Call.png)
+OpenAlex is updated regularly so you might get something slightly different, but here's what I get as of this writing
+![OpenAlex search results for Stochastic Parrot as JSON]({{site.baseurl}}_images/OpenAlex-results.png)
 
-The pagination system is not ideal and makes it more tedious to grab all the data in the People dataset. It's not common to see it set up this way for such a small dataset, but you can imagine with a very large dataset this might be necessary to reduce the call time. Let's try a query for Name in the People Resource. We need to follow the REST rules for querying.
+Note a couple of things: The data are returned in JSON. Right at the top, you have an object called "Meta". It gives you the number of returned results (29), as well as some other meta-information. Most important here is the pagination information. Most APIs that provide access to large amounts of data are 'paginated,' i.e. they don't return all results at once but split them into chunks -- pages. This helps to keep the service fast and keep costs reasonable. For OpenAlex, the default number of results returned in 25. In our case, that means results will be displayed on multiple pages.
 
-According to the documentation, in order to search within a Resource, we need to append:
-```
-/?search=<search term>
-```
-to the base URL. (Note that you will not need the brackets when you add your search term.)
+Below the Meta block you see the first 25 results, numbered from 0-24 (most computer indices start counting at 0; there are lots of [appropriately bad jokes about this](https://www.reddit.com/r/ProgrammerHumor/comments/9lipb3/because_counting_starts_at_0/)). The first results is an old friend! And we get a ton of information about this! Not just metadata but also information about the accessibility of the full text (the PDF is available freely as an open access copy) and the number of citations received. As we scroll down further, there's even a link that will get us to all items citing the "Stochastic Parrot" article (`cited_by_api_url`). A sidenote: note how well named the various fields are: you can basically read the JSON without having to consult the documentation because everything is so intuitive. That's, ahem, not always going to be as easy... Go ahead and click through some other results to get a sense of the data. If you click on the cite-by URL, you get another list that has the exact same structure: that's one thing that makes a good API: keeping results consistent for easy processing (recall "data independence" from our earlier weeks).
 
-![SWAPI Search Documentation]({{site.baseurl}}_images/SWAPI_Search_Doc.png)
+But we still only have the first 25 results, how do we get the rest? If you scroll down on the left to the "How to Use the API" heading, you find an entry about "Paging" under "Get lists of entities". Let's stick to basic paging. 
+![OpenAlex basic paging documentation]({{site.baseurl}}_images/OpenAlex-basic-paging.png)
+This looks pretty simple: we just add `page=2` to our URL. But wait, our URL looks different. At this point you need to understand how so called "query parameters" work not just for APIs but for URLs in general: "queries" (such as a search, a filter, a sort order, or a request for a specific data format) are always introduced by a question mark (`?`). Hence `?page=2` in the API documentation. As you add additional queries, these always follow an ampersand (`&`). So to look at the second page of our search results we add the pagination after our initial search query: `https://api.openalex.org/works?filter=title.search:stochastic parrot&page=2`. Note that while the exact syntax for APIs varies, query parameters _always_ work like this for RESTful APIs. 
 
-So try out a search in the People Resource for "Luke". Your URL should look like: [`https://swapi.dev/api/people/?search=Luke`](https://swapi.dev/api/people/?search=Luke). You can further refine your search by adding an ampersand (&) and a second query. For example, you can designate a data format (which the documentation calls "encoding"). ~~With this simple API example, your choices are very limited: JSON (which is the default) or wookie. Sadly at the time of this writing, wookie is throwing an "unexpected character error" so just go ahead and try adding JSON format to the last query: [`https://swapi.dev/api/people/?search=Luke&format=JSON`](https://swapi.dev/api/people/?search=Luke&format=JSON). (Note you do not need to repeat the question mark for the second query.)~~ (As of the updating of this tutorial - these choices were non-functional.)
+Just to give you one more example, let's search for a person. Because I (Karcher) am writing this, we'll search for Nic Weber. Again, you check the documentation and find [instructions for search authors](https://docs.openalex.org/api-entities/authors/search-authors) and come up with a very simple URL: `https://api.openalex.org/authors?search=Nic Weber`. We only get two results back (and I suspect they are both the same person -- just because data comes from an API doesn't always mean it's high quality). I'll leave it to you to explore the details here. Just two notes:
+1. OpenAlex tries as much as possible to use other identifiers to describe entitites. For example, you'll see Nic being described with his ORCID ID, concepts using the Wikidata ID, institutions he's affiliated with using their [Research Organization Registry (ROR) IDs](https://ror.org/), and, of course, works described by their DOIs. Relate this to the PID-graph article from the readings.
+2. As before, when you scroll down far enough in the data, you find a link to the `works_api_url`, which in turn will get you to a list of all of Nic's publications, structured again, exactly as the ones we previously looked at.
 
 This is a simple example of the concept discussed above that REST services tend to offer an easy to parse URL structure consisting primarily of nouns that reflect the logical hierarchical categories of the data being offered.
 
@@ -357,11 +359,11 @@ With the previous example, you may have wondered what to do with the JSON output
 
 I discovered this interesting [API](https://poetrydb.org/index.html) that retrieves data from a poetry database. I like this example because it provides an example of digital humanities data. Click on [Learn More](https://github.com/thundercomb/poetrydb/blob/master/README.md) from the [homepage](https://poetrydb.org/index.html). This brings us to the Github repository hosting the API. The first thing you see is README document with instructions on how to structure the URL in order to retrieve the data you’re interested in.
 
-Let's start with the first example on the page. [`http://poetrydb.org/title/Ozymandias/lines.json`](http://poetrydb.org/title/Ozymandias/lines.json) This URL is structured to return the lines of a given poem based on its title. However, I want more than just the lines of data. So with further reading in the README documentation I found that I could just remove the “lines” text from the URL to retrieve more data about the poem. [`http://poetrydb.org/title/Ozymandias/.json`](http://poetrydb.org/title/Ozymandias/.json) If you copy/paste this URL into a Firefox browser window, you'll see that Firefox automatically provides a simple layout for navigating the JSON and even an option for saving, copying, and filtering the data. This won’t be the case with all browsers and sometimes you will simply get the raw output as you can see here:
+Let's start with the first example on the page. [`https://poetrydb.org/title/Ozymandias/lines.json`](http://poetrydb.org/title/Ozymandias/lines.json) This URL is structured to return the lines of a given poem based on its title. However, I want more than just the lines of data. So with further reading in the README documentation I found that I could just remove the “lines” text from the URL to retrieve more data about the poem. [`https://poetrydb.org/title/Ozymandias/.json`](http://poetrydb.org/title/Ozymandias/.json) If you copy/paste this URL into a Firefox browser window, you'll see that Firefox automatically provides a simple layout for navigating the JSON and even an option for saving, copying, and filtering the data. This won’t be the case with all browsers and sometimes you will simply get the raw output as you can see here:
 
 ![Output of URL as seen in Safari browser]({{site.baseurl}}_images/Poetry_JSON_Safari.png)
 
-If this output were considerably longer and contained more nested arrays, it would be easy to get lost in the data. So let's use a helpful tool called [JSON Formatter](https://jsonformatter.org/), one of many JSON parsers. Click on the Upload Data button in the center of the screen and paste in a URL. Let's try data about poems by author Bronte using this URL (and note that for some reason in order for this to work here we have to add the 's' to http): `https://poetrydb.org/author/Bronte`.
+If this output were considerably longer and contained more nested arrays, it would be easy to get lost in the data. So let's use a helpful tool called [JSON Formatter](https://jsonformatter.org/), one of many JSON parsers. Click on the Upload Data button in the center of the screen and paste in a URL. Let's try data about poems by author Bronte using this URL: `https://poetrydb.org/author/Bronte`.
 
 ![Pop-up Window to paste URL]({{site.baseurl}}_images/JSONFormatter_Load.png)
 
@@ -379,7 +381,7 @@ Accessing the API documentation is the key to successfully using an API. Not all
 
 ### Additional APIs I Recommend for Practice
 
-+ [The COVID Tracking Project](https://covidtracking.com/api) (Sadly this service is ending May 2021.)
++ [The DataCite API](https://support.datacite.org/docs/api)
 + [PokeAPI The RESTful Pokemon API](https://pokeapi.co/)
 
 ## Exercise Assignment
@@ -390,10 +392,10 @@ Your exercise this week is to query an API about Pet Licenses in the City of Sea
 
 If you click on the API button in "Actions" menu in the upper right-hand corner of the dataset, you will find a link to to the full dataset in JSON format. You could copy and paste that url into a browser and you would see the maximum allowed (I think it's 1000) number of records in the dataset. But for this exercise, you will find a smaller, more specific set of records. Click on the "API Documentation" link at the bottom of the pop-up window.
 
-![]({{site.baseurl}}_images/SeattlePetAPI.png)
+![The API pop-up for the Seattle Pet dataset]({{site.baseurl}}_images/SeattlePetAPI.png)
 
 This brings you to some very important documentation telling you how to query the dataset. Note, you **do not** need to apply for a token for this exercise. Read through to (or scroll down to) the `Fields` section of the documentation and expand the section on Animal's Name.
 
-![]({{site.baseurl}}_images/AnimalsNameQuery.png)
+![The documentation for animal name queries]({{site.baseurl}}_images/AnimalsNameQuery.png)
 
-The documentation gives you the exact query URL for searching the dataset for a particular pet name. I want you to query the dataset for a pet name that is **not** *Zen*. Post to the [discussion board](https://canvas.uw.edu/courses/1641385/discussion_topics/8016065) the name of the pet you chose to query on and what you found for results. Feel free to test things like different cases, names with spaces, etc. If this was really easy for you, try retrieving a csv instead of JSON, or try a SoQL query found at this [link](https://dev.socrata.com/docs/functions/#2.1,) in the documentation.
+The documentation gives you the exact query URL for searching the dataset for a particular pet name. I want you to query the dataset for a pet name that is **not** *Zen*. Post to the [discussion board](https://canvas.uw.edu/courses/1724350/discussion_topics/8931153) the name of the pet you chose to query on and what you found for results. Feel free to test things like different cases, names with spaces, etc. If this was really easy for you, try retrieving a csv instead of JSON, or try a [SoQL query found at this link](https://dev.socrata.com/docs/functions/#2.1,) in the documentation.
