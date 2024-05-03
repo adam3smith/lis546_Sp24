@@ -289,11 +289,12 @@ Additional valuable readings on data discovery:
 
 ## Lecture
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/87foO4UHVaw?si=LM5Hh_qwHUoked03" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Our exercise this week focuses on exploring the concept of an API.
 
 ## Exercise
 
+Our exercise this week focuses on exploring the concept of an API.
 ### How to use an API (And what is it anyway?)
 API is the acronym for Application Programming Interface. An API does the work of retrieving data in a variety of forms from its original home to a source that is requesting that data using a specific set of formal methods or rules. The source may be you making a request through the web or it may be a mobile app retrieving map data from Google. A search for "What is an API" will result in many great tutorials. I found a quick 3-minute video that covers this topic well and will prepare you for the remainder of the tutorial. Note, this video is put out by a company but I do not mean it as an endorsement for the company, I just like their concise description. Let’s take a look...
 
