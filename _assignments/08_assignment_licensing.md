@@ -7,7 +7,7 @@ attachment:
 solutions:
 due_event:
     type: due
-    date: 2024-05-16T23:59:00Z
+    date: 2024-05-23T23:59:00Z
     description: 'Submit Licensing Assignment'
     url: /assignments/08_assignment_licensing
 ---

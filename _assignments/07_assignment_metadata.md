@@ -7,7 +7,7 @@ attachment:
 solutions:
 due_event:
     type: due    
-    date: 2024-05-09T23:59:00Z
+    date: 2024-05-16T23:59:00Z
     description: 'Submit Metadata Application Profile'
     url: /assignments/07_assignment_metadata
 ---
@@ -39,6 +39,6 @@ For each element in your application profile you should (eventually) provide the
 
 Here is an [example entry](https://github.com/RochelleLundy/INFX-551-Spring2017/tree/master/r3Recycling/protocolReport/metadata) from a previous class.
 
-You should also choose an encoding scheme for your examples (JSON or XML. Note: I don't expect you to actually produce these records.)
+You should also choose an encoding scheme for your examples (JSON or XML. _Note: I don't expect you to actually produce these records._)
 
 Remember from our readings: "If an implementor wishes to create 'new' elements that do not exist elsewhere then (under this model) they must create their own namespace schema, and take responsibility for 'declaring' and maintaining that schema." You probably don't want to do this, but if you do let's discuss the requirements.
