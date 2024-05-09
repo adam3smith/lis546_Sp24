@@ -7,7 +7,7 @@ attachment:
 solutions:
 due_event:
     type: due    
-    date: 2024-05-16T23:59:00Z
+    date: 2024-05-17T23:59:00Z
     description: 'Submit Metadata Application Profile'
     url: /assignments/07_assignment_metadata
 ---
@@ -42,3 +42,8 @@ Here is an [example entry](https://github.com/RochelleLundy/INFX-551-Spring2017/
 You should also choose an encoding scheme for your examples (JSON or XML. _Note: I don't expect you to actually produce these records._)
 
 Remember from our readings: "If an implementor wishes to create 'new' elements that do not exist elsewhere then (under this model) they must create their own namespace schema, and take responsibility for 'declaring' and maintaining that schema." You probably don't want to do this, but if you do let's discuss the requirements.
+
+
+**Deliverable**: Post a link to your MAP (which I'd expect mostly to be in table form, but you can come up with other options) to the [Canvas disscussion board](https://canvas.uw.edu/courses/1724350/discussion_topics/8945808).
+If you haven't already, please start thinking about how and where to put together your final project.
+
