@@ -31,4 +31,4 @@ Here are the basic questions you should answer in this section of your protocol:
 - Post a link to the licensing section of your protocol on the [canvas forum](https://canvas.uw.edu/courses/1724350/discussion_topics/8959910)
 
 If you are interested in a primer on data licensing you might consult the following:
-- Carroll, M. W. (2015). Sharing research data and intellectual property law: A primer. PLoS biology, 13(8), e1002235. [HTML](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002235)
+- Carroll, M. W. (2015). [Sharing research data and intellectual property law: A primer. PLoS biology](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002235), 13(8), e1002235.
