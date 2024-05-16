@@ -5,14 +5,14 @@ title: "Week 9: Linked Data"
 tldr: "Introducing some working definitions and providing an overview of concepts related to linked data and the promise, but ultimate failure of the semantic web."
 thumbnail: /static_files/presentations/linked.png
 links:
-    - url: https://screencast-o-matic.com/embed?sc=cYhuoBpZLZ&v=6&ff=1&title=0&controls=1
+    - url: 
       name: video
     - url: /content/linked-data.html
       name: content
 
 ---
 **Required Readings:**
-- <!--[Course Content]({{ site.baseurl }}/content/linked-data.html)-->
+- [Course Content]({{ site.baseurl }}/content/linked-data.html)
 - [Allemang, D., & Hendler, J. (2011). Semantic web for the working ontologist: effective modeling in RDFS and OWL. Second Edition](https://canvas.uw.edu/files/65174738/download?download_frd=1)
     - Read Chapter 1 for an introduction to SW’s concepts. If you are interested Chapter 2 gives a bit more detail on how the SW works, and Chapter 3 introduces RDF and knowledge modeling.
 - [Ontology Development 101 (Noy and McGuiness)](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html)

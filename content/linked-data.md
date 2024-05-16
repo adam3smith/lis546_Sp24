@@ -3,9 +3,9 @@ layout: default
 ---
 # Linked Data
 **Original Author: Nic Weber**  
-**Editing & Updates: Bree Norlander** 
+**Editing & Updates: Bree Norlander, Sebastian Karcher** 
 
-The ninth week in Data Curation II addresses the prospect of linked data for curation. At various points this quarter we have discussed the idea of semantically enhanced data that takes on a form of artificial intelligence. This "intelligence" is practically achieved through enhanced markup of data and web infrastructure that enables applications to make use of data that are published following strict linked data standards. Thus far we have touched on, but not explored in-depth the ways that linked data practically manifests in curation work. In the following module, I will introduce some working definitions and provide an overview of concepts related to linked data and the promise, but ultimate failure of the semantic web. 
+The ninth week in Data Curation II addresses the prospect of linked data for curation. At various points this quarter we have discussed the idea of semantically enhanced data. The 'magic' of linked data works through enhanced markup of data and web infrastructure that enables applications to make use of data that are published following strict linked data standards. Thus far we have touched on, but not explored in-depth, the ways that linked data practically manifests in curation work. In the following module, I will introduce some working definitions and provide an overview of concepts related to linked data and the promise, but ultimate failure of the semantic web. 
 
 ## The Early Web
 
@@ -19,9 +19,9 @@ On the early web, if I searched [Ask Jeeves](https://en.wikipedia.org/wiki/Ask.c
 
 In contemporary search engines, I can search Google for "Ursula Franklin" and immediately receive both indexed webpages about the scientist, as well as some structured factual information about her life, her written works, and similar scientists.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/GoogleUrsula.png)
+![Google summary for Ursula Franklin]{{site.baseurl}}LIS-546-SPR2021/master/_images/GoogleUrsula.png)
 
-The display of this factual information (called the ["knowledge panel"](https://support.google.com/knowledgepanel/answer/9163198?hl=en) isn't *just* a neat trick by Google - it is made possible by semantically enhanced information that is queried and retrieved based on **linked data** standards. This contemporary version of the web allows for the data, information embedded in pages such as photos, videos, and facts, to be queried and retrieved. That is practically achieved through markup with linked data standards that both point at one another, but also allow for indexing and retrieval of data.
+The display of this factual information (called the ["knowledge panel"](https://support.google.com/knowledgepanel/answer/9163198?hl=en)) isn't *just* a neat trick by Google; it is made possible by semantically enhanced information that is queried and retrieved based on **linked data** standards. This contemporary version of the web allows for the data -- information embedded in pages such as photos, videos, and facts -- to be queried and retrieved. That is practically achieved through markup with linked data standards that both point at one another, but also allow for indexing and retrieval of data.
 
 In the following sub-sections I'll unpack how this linked data ecosystem evolved, and the implications that a paradigm of linked data holds for the working curation professional.    
 
@@ -32,18 +32,18 @@ The semantic web, which was positioned between the interactivity of Web 2.0 and 
 
 Where the semantic web failed was in believing that this kind of explicit declaration of web content was scalable. The effort needed to structurally enhance all factual information with rigid standards was overwhelming (given the difficulty of using standards like the Resource Description Framework or [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework)) - given the variety of information on the web and the effort needed to explicitly declare this factual information in a markup language like RDF. As a result, the semantic web vision of building inference engines has faltered. But, the ability to use markup to facilitate the exchange of data on the web - linked data - has had much more success. Linked data makes use of lightweight standards that allow for a few simple statements to be included in a web-page, facilitating the exchange of data. Moving from a vision of "inference" and "intelligence" to machine-readable linking of data has proved much more viable for data curators. 
 
-In previous chapters we have discussed some of the ways in which machine-readability is achieved, but we did not go into detail about how this encoding practically takes place. In the following section I will describe some of the practical realities of linked data, and how linked data is created using the standard JSON-LD. 
+In previous chapters we have discussed some of the ways in which machine-readability is achieved, but we did not go into detail about how this encoding practically takes place. In the following section I will describe some of the practical realities of linked data, and how linked data is created using the standard JSON-LD, which we have mentioned (and seen) multiple times during the last weeks. 
 
 ## Linked Data
 The linked data paradigm, which is the practical manifestation of the semantic web vision, makes use of structured markup to enhance web resources such that we can query and discover related information through simple declarations.
 
 Let's take a simple web page that includes a bunch of random ideas expressed about people, places, and things (note: I choose the [hipster Lorum Ipsum](https://hipsum.co/) random text generation to create text for this "dummy" web page). If one of those topics in our web page is about Austin, TX web 1.0 would create a link between that topic and a relevant page about Austin, TX.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/austin-earlyWeb.jpg)
+![screen shot of non-sense text and an early version of austintexas.com ]({{site.baseurl}}_images/austin-earlyWeb.jpg)
 
-In a linked data paradigm we could not only create a simple link from one web resource to another, but we could semantically enhance this markup using existing data about Austin, TX on the world wide web. We would practically do this by explicitly stating that Austin, TX is a place, that place is near some other places in Texas, and Austin, TX has a particular population. Just as we have discussed in previous chapters - we want to make these kinds of explicit declarations drawing upon existing standards. In this example, we want to draw on authoritative data about places that exist in the real world. [DbPedia](https://en.wikipedia.org/wiki/DBpedia) is a linked data resource that contains exactly this kind of information. DbPedia is in fact all of the information that exists in Wikipedia put into a linked data format. This allows us to make simple declarations in our markup "linking" to what DbPedia knows about the place Austin, TX.
+In a linked data paradigm, we could not only create a simple link from one web resource to another, but we could semantically enhance this markup using existing data about Austin, TX on the world wide web. We would practically do this by explicitly stating that Austin, TX is a place, that place is near some other places in Texas, and Austin, TX has a particular population. Just as we have discussed in previous chapters - we want to make these kinds of explicit declarations drawing upon existing standards. In this example, we want to draw on authoritative data about places that exist in the real world. [DbPedia](https://en.wikipedia.org/wiki/DBpedia) is a linked data resource that contains exactly this kind of information. DbPedia aims to include all of the information that exists in Wikipedia in a linked data format. This allows us to make simple declarations in our markup "linking" to what DbPedia knows about the place Austin, TX.
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/AustinLateWeb.jpg)
+![Text and website of Austin, TX, with intermediate semantic layer based on DbPedia]({{site.baseurl}}AustinLateWeb.jpg)
 
 Note that in the markup of the image above - we not only created an HTML link between the two resources, but we also included some markup that referenced DbPedia. We essentially said "DbPedia - tell us all of the facts that you know about Austin, TX including its population and what other places Austin, TX is near". The linked data graph that results from this markup is below our syntax. Using just this simple markup, DbPedia was queried and returned to our webpage some factual information about Austin, TX - including that it has a population of 964,254, and that it is near other cities in Texas. Pretty neat, right? All we had to do was ask DbPedia what it knows about Austin, TX and the linked data syntax of our page allowed machines to trade factual information about what is known about Austin, TX. 
 
@@ -53,12 +53,12 @@ In the example above I cheated a little by knowing that DbPedia was a linked dat
 
 ![](https://lod-cloud.net/versions/2007-05-01/lod-cloud.png)
 
-It has now (as of May 2020) grown to over [1300 authoritative linked data sources](https://lod-cloud.net/) (note that image is big and may take a long time to load) that can be used to semantically enhance any web page. More importantly, we can create linked data using standards like Schema.org to turn any data that we publish to the web into linked data. That is, we can link any data we publish up to this growing "cloud" through syntax. Doing so increases the ability of our data to be meaningfully discovered, indexed by emerging linked data sources, and in essence, connected to all other data that exists on the web!
+It has now (as of May 2020) grown to over [1300 authoritative linked data sources](https://lod-cloud.net/) that can be used to semantically enhance any web page. More importantly, we can create linked data using standards like Schema.org to turn any data that we publish to the web into linked data. That is, we can link any data we publish up to this growing "cloud" through syntax. Doing so increases the ability of our data to be meaningfully discovered, indexed by emerging linked data sources, and in essence, connected to all other data that exists on the web!
 
 In the next section we will look at how we can practically link our data to existing resources. This is achieved through the standard JSON-LD. 
 
 ## JSON-LD
-Schema.org - which we have talked about in the previous chapter on Data Discovery - is practically implemented on the web through an encoding standard called JSON-LD (which stands for JSON-Linked Data). To understand the power of JSON-LD let's think all the way back to our chapter on [Tables, Trees, and Triples](https://norlab.github.io/LIS-546-SPR2021/content/tables-trees-triples.html) where I described differences in hierarchical data structuring (XML) vs graph structuring (JSON). Recall that in that chapter I warned:
+Schema.org - which we have talked about in the previous chapter on Data Discovery - is practically implemented on the web through an encoding standard called JSON-LD (which stands for JSON-Linked Data). To understand the power of JSON-LD let's think all the way back to our chapter on [Tables, Trees, and Triples]({{site.baseurl}}content/tables-trees-triples.html) where I described differences in hierarchical data structuring (XML) vs graph structuring (JSON). Recall that in that chapter I warned:
 
 <blockquote>What we gain in expressive power from a markup language comes at the expense of computational tractability. The more syntax we have to write to define how and where a set of data are interpreted by our computers at the physical level, the more difficult and expensive it will be to retrieve that data.</blockquote>
 
@@ -108,7 +108,7 @@ In this example we have declared that our attributes are not just dumb objects, 
 
 Note that in this example our data also has an attribute `homepage` that corresponds with the Schema.org definition for a URL, and a `photo` which corresponds with the Schema.org definition of an Image. So a machine can interpret that Nic Weber is the name of a person, that person has a webpage, and that webpage contains a photo of Nic Weber. If another web resource wanted to consume my linked data - they could ask Schema.org "What do you know about Nic Weber" and retrieve a result like "This is a person, with a webpage, and a photo". To see this in practice - here is a result when you search for me on Google. The University of Washington has used Schema.org to say who I am, what my photo is, and through this web of linked data Google also identifies my Google Scholar page where it pulls in Co-authors and relevant publications that appear on the web. 
 
-![](https://raw.githubusercontent.com/norlab/LIS-546-SPR2021/master/_images/Nic-GoogleResults.png)
+![]({{site.baseurl}}_images/Nic-GoogleResults.png)
 
 All of this semantic meaning is achieved through the use of JSON-LD and Schema.org. 
 
@@ -147,7 +147,7 @@ Practically though it seems rather unrealistic to expect that open data publishe
 
 ## Lecture
 
-<iframe width=853 height=478 frameborder="0" scrolling="no" src="https://screencast-o-matic.com/embed?sc=cYhuoBpZLZ&v=6&ff=1&title=0&controls=1" allowfullscreen="true"></iframe>
+To come
 
 ## Reading
 
