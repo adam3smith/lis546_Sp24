@@ -8,7 +8,7 @@ attachment:
 solutions:
 due_event:
     type: due
-    date: 2024-05-31T23:59:00Z
+    date: 2024-06-05T23:59:00Z
     description: Submit Final Protocol
     url: /assignments/10_assignment_final_protocol
 ---
