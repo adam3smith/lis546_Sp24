@@ -74,7 +74,7 @@ You can learn a bit about the background and principles behind differential priv
 
 The decision to use differential privacy to protect census data was (and remains) highly controversial, though. Many demographers have [fiercely criticized the step](https://columbia.edu/~js5338/podcast/), arguing that it makes important types of analyses impossible and that its use isn't necessary.
 
-### Emulation
+## Emulation
 Throughout the quarter we have discussed the transformation of data from closed or proprietary formats to open formats (or plain text encodings) which enable data to be reliably reused across different computing environments. There are typically two ways to achieve these transformations: Migration and Emulation. 
 
 Migration is, quite simply, the reformatting of data - which depends upon moving content encoded in one standard to another (e.g. Excel to CSV).
